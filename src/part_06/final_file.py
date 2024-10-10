@@ -337,7 +337,6 @@ class MainMenu(Screen):
             if item:
                 self.container.add_item(item)
                 #meow
-                
                 break
             else:
                 print(f"\"{item_name}\" not found. Try again.")
