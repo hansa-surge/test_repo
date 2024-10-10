@@ -131,6 +131,8 @@ class MagicContainer(Container):
 
     def __str__(self) -> str:
         capacity_display = f"{self.get_magic_capacity_filled()}/{self.weight_capacity}"
+        if self.is_multi_container:
+            capacity_display = "0/0"
         return (f"{self.name} (total weight: {self.get_current_weight()}, "
                 f"empty weight: {self.weight}, capacity: {capacity_display})")
     
