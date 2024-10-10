@@ -165,7 +165,7 @@ class ContainerManager:
                     for child_name in row[1:]:
                         child_container = instance.get_container_by_name(child_name)
                         if child_container:
-                            mother_container.add_item(child_container)
+                            mother_container.add_item(child_container, start_load=True)
                     instance.containers.append(mother_container)
 
         # Load magic containers if the file path is provided

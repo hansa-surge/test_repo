@@ -34,6 +34,41 @@ class Item:
     
     def get_item_weight(self):
         return self.weight
+    
+class ItemManager:
+    def __init__(self):
+        self.items: List[Item] = []  # Initialize as an empty list
+
+    @classmethod
+    def load_items(cls, file_path: str) -> 'ItemManager':
+        instance = cls()  # Create a new instance of Items
+        with open(file_path, 'r') as file:
+            reader = csv.reader(file)
+            next(reader)  # Skip the first row (header)
+            for row in reader:  # Process items
+                name, weight = row
+                instance.items.append(Item(name, int(weight)))  # Use instance's items
+        return instance  # Return the created instance
+    
+    def add_items(self, items: List[Item]):
+        self.items.extend(items)  # Add loaded items to container
+        
+    def print_items(self):
+        for item in self.items:
+            print(item)
+            
+    def get_items(self) -> List[Item]:
+        return self.items
+    
+    def get_item_by_name(self, item_to_find) -> List[Item]:
+        for item in self.items:
+            if item.name.strip().lower() == item_to_find.strip().lower():
+                return item
+        return None
+    
+    def get_count(self) -> int:
+        return len(self.items)
+
 
 class Container(Item):
     def __init__(self, name: str, weight: int, weight_capacity: int):
@@ -63,8 +98,8 @@ class Container(Item):
                 instance.add_item(item)
         return instance
 
-    def add_item(self, item: Item, parent_container_name = None):
-        if isinstance(item, Container):
+    def add_item(self, item: Item, parent_container_name = None, start_load=False):
+        if (isinstance(item, Container) and start_load):
             self.items.append(item)
             self.is_multi_container = True
             self.weight += item.get_current_weight()
@@ -122,46 +157,12 @@ class Container(Item):
     def get_count(self) -> int:
         return len(self.items)
     
-class ItemManager:
-    def __init__(self):
-        self.items: List[Item] = []  # Initialize as an empty list
-
-    @classmethod
-    def load_items(cls, file_path: str) -> 'ItemManager':
-        instance = cls()  # Create a new instance of Items
-        with open(file_path, 'r') as file:
-            reader = csv.reader(file)
-            next(reader)  # Skip the first row (header)
-            for row in reader:  # Process items
-                name, weight = row
-                instance.items.append(Item(name, int(weight)))  # Use instance's items
-        return instance  # Return the created instance
-    
-    def add_items(self, items: List[Item]):
-        self.items.extend(items)  # Add loaded items to container
-        
-    def print_items(self):
-        for item in self.items:
-            print(item)
-            
-    def get_items(self) -> List[Item]:
-        return self.items
-    
-    def get_item_by_name(self, item_to_find) -> List[Item]:
-        for item in self.items:
-            if item.name.strip().lower() == item_to_find.strip().lower():
-                return item
-        return None
-    
-    def get_count(self) -> int:
-        return len(self.items)
-
 class MagicContainer(Container):
     def __init__(self, name: str, weight: int, weight_capacity: int):
         super().__init__(name, weight, weight_capacity)
 
-    def add_item(self, item: Item, parent_container_name = None):
-        if isinstance(item, Container):
+    def add_item(self, item: Item, parent_container_name = None, start_load=False):
+        if (isinstance(item, Container) and start_load):
             self.items.append(item)
             self.is_multi_container = True
             self.weight_capacity += item.weight_capacity
@@ -231,7 +232,7 @@ class ContainerManager:
                     for child_name in row[1:]:
                         child_container = instance.get_container_by_name(child_name)
                         if child_container:
-                            mother_container.add_item(child_container)
+                            mother_container.add_item(child_container, start_load=True)
                     instance.containers.append(mother_container)
 
         # Load magic containers if the file path is provided
@@ -260,6 +261,7 @@ class ContainerManager:
 
         return instance
 
+
     def print_containers(self):
         for container in self.containers:
             container.list_items()  # Assuming `Container` class has print_items()
@@ -278,15 +280,6 @@ class ContainerManager:
 
     def get_count(self) -> int:
         return len(self.containers)
-
-def print_items_and_containers(items:ItemManager , containers:ContainerManager):
-    print(f"Initialised {items.get_count()+containers.get_count()} items including {containers.get_count()} containers.\n")
-    
-    print("Items:")
-    items.print_items()
-
-    print("\nContainers:")
-    containers.print_containers()
 
 class ContainerSelectScreen(Screen):
     def __init__(self, containers:ContainerManager) -> None:
@@ -343,6 +336,7 @@ class MainMenu(Screen):
 
             if item:
                 self.container.add_item(item)
+                #meow
                 
                 break
             else:
