@@ -31,7 +31,7 @@ class Container(Item):
                 instance.add_item(item)
         return instance
 
-    def add_item(self, item: Item, parent_container_name = None):
+    def add_item(self, item: Item):
         if isinstance(item, Container):
             self.items.append(item)
             self.is_multi_container = True
@@ -40,16 +40,11 @@ class Container(Item):
         else:
             for container in self.items:
                 if(isinstance(container, Container)):
-                    if(item.get_current_weight() + container.get_current_capacity() <= container.weight_capacity - container.get_child_container_capacity() or isinstance(item, Container)):
-                        container.add_item(item, self.name)
-                        return True
+                    return container.add_item(item)
                 
-            if item.get_current_weight() + self.get_current_capacity() <= self.weight_capacity - self.get_child_container_capacity():
+            if item.get_current_weight() + self.get_current_weight() <= self.weight_capacity - self.get_child_container_capacity():
                 self.items.append(item)
-                if(parent_container_name):
-                    print(f"Success! Item \"{item.name}\" stored in container \"{parent_container_name}\".")
-                else:
-                    print(f"Success! Item \"{item.name}\" stored in container \"{self.name}\".")
+                print(f"Success! Item \"{item.name}\" stored in container \"{self.name}\".")
             else:
                 print(f"Failure! Item \"{item.name}\" NOT stored in container \"{self.name}\".")
                 return False
@@ -67,13 +62,10 @@ class Container(Item):
     
     def get_item_weight(self):
         return sum(item.get_current_weight() for item in self.items if not isinstance(item, Container))
-    
-    def get_current_capacity(self):
-        return sum(item.get_current_weight() for item in self.items if not isinstance(item, Container))
 
     def list_items(self, depth=1):
         print(self)
-        for item in self.items:
+        for item in sorted(self.items, key=lambda x: x.name):
             indent = "   " * depth
             if isinstance(item, Container):
                 print(indent, end="")
@@ -115,7 +107,10 @@ class MagicContainer(Container):
     
     @classmethod
     def convert_container_to_magic(cls, container:Container, magic_name):
-        return cls(magic_name, container.weight, container.weight_capacity)
+        instance = cls(magic_name, container.weight, container.weight_capacity)
+        instance.is_multi_container = container.is_multi_container
+        instance.items = container.items
+        return instance
    
     def get_magic_capacity_filled(self):
         return sum(item.get_current_weight() for item in self.items if not isinstance(item, Container))
@@ -127,66 +122,67 @@ class MagicContainer(Container):
         capacity_display = f"{self.get_magic_capacity_filled()}/{self.weight_capacity}"
         return (f"{self.name} (total weight: {self.get_current_weight()}, "
                 f"empty weight: {self.weight}, capacity: {capacity_display})")
+
 class ContainerManager:
     def __init__(self):
         self.containers: List[Container] = []  # Initialize as an empty list
 
     @classmethod
-    def load_containers(cls, containers_file_path: str = None, multi_container_file_path: str = None, magic_container_file_path: str = None, multi_magic_container_file_path: str = None) -> 'ContainerManager':
-        instance = cls()
+    def load_containers(cls, file_path: str) -> 'ContainerManager':
+        instance = cls()  # Create a new instance of ContainerManager
+        with open(file_path, 'r') as file:
+            reader = csv.reader(file)
+            next(reader)  # Skip header
+            instance.containers = [
+                Container(name, int(empty), int(capacity))
+                for name, empty, capacity in reader  # Use list comprehension
+            ]
+        return instance
 
-        # Load regular containers if the file path is provided
-        if containers_file_path:
-            with open(containers_file_path, 'r') as file:
-                reader = csv.reader(file)
-                next(reader)  # Skip header
-                instance.containers = [
-                    Container(name, int(empty), int(capacity))
-                    for name, empty, capacity in reader
-                ]
-
-        # Load multi containers if the file path is provided
-        if multi_container_file_path:
-            with open(multi_container_file_path, 'r') as file:
-                reader = csv.reader(file)
-                next(reader)  # Skip header
-                for row in reader:
-                    mother_container = Container(row[0], 0, 0)  # First entry is the mother container name
-                    for child_name in row[1:]:
-                        child_container = instance.get_container_by_name(child_name)
-                        if child_container:
-                            mother_container.add_item(child_container)
-                    instance.containers.append(mother_container)
-
-        # Load magic containers if the file path is provided
-        if magic_container_file_path:
-            with open(magic_container_file_path, 'r') as file:
-                reader = csv.reader(file)
-                next(reader)  # Skip header
-                for row in reader:
-                    magic_container_name, container_name = row
-                    normal_container = instance.get_container_by_name(container_name)
-                    if normal_container:
-                        magic_container = MagicContainer.convert_container_to_magic(normal_container, magic_container_name)
-                        instance.containers.append(magic_container)
-
-        # Load multi-magic containers if the file path is provided
-        if multi_magic_container_file_path:
-            with open(multi_magic_container_file_path, 'r') as file:
-                reader = csv.reader(file)
-                next(reader)  # Skip header
-                for row in reader:
-                    magic_container_name, container_name = row
-                    normal_container = instance.get_container_by_name(container_name)
-                    if normal_container:
-                        magic_container = MagicContainer.convert_container_to_magic(normal_container, magic_container_name)
-                        instance.containers.append(magic_container)
-
+    @classmethod
+    def load_multi_containers(cls, containers_file_path: str, multi_container_file_path: str) -> 'ContainerManager':
+        instance = cls.load_containers(containers_file_path)  # Load containers
+        with open(multi_container_file_path, 'r') as file:
+            reader = csv.reader(file)
+            next(reader)  # Skip header
+            for row in reader:
+                mother_container = Container(row[0], 0, 0)  # First entry is mother container name
+                for child_name in row[1:]:
+                    child_container = instance.get_container_by_name(child_name)
+                    if child_container:
+                        mother_container.add_item(child_container)
+                instance.containers.append(mother_container)
+        return instance
+    
+    @classmethod
+    def load_magic_containers(cls, containers_file_path: str, magic_container_file_path: str):
+        instance = cls.load_containers(containers_file_path)  # Load containers
+        with open(magic_container_file_path, 'r') as file:
+            reader = csv.reader(file)
+            next(reader)  # Skip header
+            for row in reader:
+                magic_container_name, container_name = row
+                normal_container = instance.get_container_by_name(container_name)
+                magic_container = MagicContainer.convert_container_to_magic(normal_container, magic_container_name)  # First entry is mother container name
+                instance.containers.append(magic_container)
+        return instance
+    
+    @classmethod
+    def load_multi_magic_containers(cls, containers_file_path: str, multi_container_file_path: str, magic_container_file_path: str):
+        instance = cls.load_multi_containers(containers_file_path, multi_container_file_path)  # Load containers
+        with open(magic_container_file_path, 'r') as file:
+            reader = csv.reader(file)
+            next(reader)  # Skip header
+            for row in reader:
+                magic_container_name, container_name = row
+                normal_container = instance.get_container_by_name(container_name)
+                magic_container = MagicContainer.convert_container_to_magic(normal_container, magic_container_name)  # First entry is mother container name
+                instance.containers.append(magic_container)
         return instance
 
 
     def print_containers(self):
-        for container in self.containers:
+        for container in sorted(self.containers, key=lambda x: x.name):
             container.list_items()  # Assuming `Container` class has print_items()
 
     def add_container(self, containers: List[Container]):
