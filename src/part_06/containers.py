@@ -42,7 +42,7 @@ class Container(Item):
                 if(isinstance(container, Container)):
                     return container.add_item(item)
                 
-            if item.get_current_weight() + self.get_current_weight() <= self.weight_capacity - self.get_child_container_capacity():
+            if item.get_current_weight() + self.get_c() <= self.weight_capacity - self.get_child_container_capacity():
                 self.items.append(item)
                 print(f"Success! Item \"{item.name}\" stored in container \"{self.name}\".")
             else:

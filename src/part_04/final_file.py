@@ -72,11 +72,11 @@ class Container(Item):
         else:
             for container in self.items:
                 if(isinstance(container, Container)):
-                    if(item.get_current_weight() + container.get_current_weight() <= container.weight_capacity - container.get_child_container_capacity() or isinstance(item, Container)):
+                    if(item.get_current_weight() + container.get_current_capacity() <= container.weight_capacity - container.get_child_container_capacity() or isinstance(item, Container)):
                         container.add_item(item, self.name)
                         return True
                 
-            if item.get_current_weight() + self.get_current_weight() <= self.weight_capacity - self.get_child_container_capacity():
+            if item.get_current_weight() + self.get_current_capacity() <= self.weight_capacity - self.get_child_container_capacity():
                 self.items.append(item)
                 if(parent_container_name):
                     print(f"Success! Item \"{item.name}\" stored in container \"{parent_container_name}\".")
@@ -105,7 +105,7 @@ class Container(Item):
 
     def list_items(self, depth=1):
         print(self)
-        for item in self.items:
+        for item in sorted(self.items, key=lambda x: x.name):
             indent = "   " * depth
             if isinstance(item, Container):
                 print(indent, end="")
