@@ -47,7 +47,7 @@ class Container(Item):
                 self.items.append(item)
                 print(f"Success! Item \"{item.name}\" stored in container \"{self.name}\".")
             else:
-                print(f"Failure! Item \"{item.name}\" exceeds the weight capacity of \"{self.name}\".")
+                print(f"Failure! Item \"{item.name}\" NOT stored in container \"{self.name}\".")
                 return False
         return True
 
