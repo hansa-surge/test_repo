@@ -1,0 +1,116 @@
+Initialised 57 items including 25 containers.
+
+Enter the name of the container: A small pouch
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+2
+A small pouch (total weight: 1, empty weight: 1, capacity: 0/20)
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Sam's water pouch
+Success! Item "Sam's water pouch" stored in container "A small pouch".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Paul's only frontal lobe
+Success! Item "Paul's only frontal lobe" stored in container "A small pouch".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Gabe's Steam game library
+Success! Item "Gabe's Steam game library" stored in container "A small pouch".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+2
+A small pouch (total weight: 11, empty weight: 1, capacity: 10/20)
+   Sam's water pouch (weight: 1)
+   Paul's only frontal lobe (weight: 9)
+   Gabe's Steam game library (weight: 0)
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Hui's Hidden Hamster Hoard
+Failure! Item "Hui's Hidden Hamster Hoard" NOT stored in container "A small pouch".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Chloe's half baked ideas
+Success! Item "Chloe's half baked ideas" stored in container "A small pouch".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+2
+A small pouch (total weight: 16, empty weight: 1, capacity: 15/20)
+   Sam's water pouch (weight: 1)
+   Paul's only frontal lobe (weight: 9)
+   Gabe's Steam game library (weight: 0)
+   Chloe's half baked ideas (weight: 5)
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+2
+A small pouch (total weight: 16, empty weight: 1, capacity: 15/20)
+   Sam's water pouch (weight: 1)
+   Paul's only frontal lobe (weight: 9)
+   Gabe's Steam game library (weight: 0)
+   Chloe's half baked ideas (weight: 5)
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Charlie's unread emails
+Failure! Item "Charlie's unread emails" NOT stored in container "A small pouch".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: A rock
+Success! Item "A rock" stored in container "A small pouch".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+0

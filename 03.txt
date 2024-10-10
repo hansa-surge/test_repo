@@ -1,0 +1,176 @@
+Task 3: Multiple compartments (1.5 marks)
+"... then the user picks up the loot, and it's in the bag", finishes Robbie, with a smirk. "So, how do you like the game?"
+"Forget it! A container with a single compartment is not realistic," opines Fibonacci. "Even in a video game!"
+Robbie actually sort of agrees. Looks like you're not done yet...
+
+Task Description
+An additional file, multi_containers.csv, now provides the description of containers that have multiple compartments, each behaving like an independent container. The menu itself does not change.
+Container with multiple compartments
+
+The empty weight of a container with multiple compartments is the sum of the empty weights of the compartments.
+When looting an item, the item can be looted if it fits in one compartment. If it fits in multiple compartments, it is placed in the first one (in the order listed in the file). Once an item is placed in a compartment, it is not moved, even if that would allow looting more items.
+Displaying a container with multiple compartments now shows the items stored in each compartment:
+
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+2
+A coles shopping cart (total weight: 3720, empty weight: 43, capacity: 0/0)
+   A coles shopping bag (total weight: 1001, empty weight: 1, capacity: 1000/1000)
+      A normal cheese platter (weight: 1000)
+   A backpack (total weight: 2717, empty weight: 40, capacity: 2677/5000)
+      Taylor's ex-lovers list (weight: 999)
+      Ed's forum posts (weight: 678)
+      A normal cheese platter (weight: 1000)
+   A woolworths shopping bag (total weight: 1, empty weight: 1, capacity: 0/1200)
+   A coles shopping bag (total weight: 1, empty weight: 1, capacity: 0/1000)
+See Example 1 for a complete example.
+Consider using classes and inheritance in your program.
+Your program must retain the same functionality as in Task 2, which is to say that it should be possible to select at the beginning of the program either a standard container, or a container with multiple compartments. See Example 2.
+Examples
+User inputs are in bold font below.
+Example 1
+Initialised 52 items including 20 containers.
+
+Enter the name of the container: A coles shopping cart
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+2
+A coles shopping cart (total weight: 43, empty weight: 43, capacity: 0/0)
+   A coles shopping bag (total weight: 1, empty weight: 1, capacity: 0/1000)
+   A backpack (total weight: 40, empty weight: 40, capacity: 0/5000)
+   A woolworths shopping bag (total weight: 1, empty weight: 1, capacity: 0/1200)
+   A coles shopping bag (total weight: 1, empty weight: 1, capacity: 0/1000)
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Pierre's outdated meme collection
+Failure! Item "Pierre's outdated meme collection" NOT stored in container "A coles shopping cart".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: 1
+"1" not found. Try again.
+Enter the name of the item: A normal cheese platter
+Success! Item "A normal cheese platter" stored in container "A coles shopping cart".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Taylor's ex-lovers list
+Success! Item "Taylor's ex-lovers list" stored in container "A coles shopping cart".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Ed's forum posts
+Success! Item "Ed's forum posts" stored in container "A coles shopping cart".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+2
+A coles shopping cart (total weight: 2720, empty weight: 43, capacity: 0/0)
+   A coles shopping bag (total weight: 1001, empty weight: 1, capacity: 1000/1000)
+      A normal cheese platter (weight: 1000)
+   A backpack (total weight: 1717, empty weight: 40, capacity: 1677/5000)
+      Taylor's ex-lovers list (weight: 999)
+      Ed's forum posts (weight: 678)
+   A woolworths shopping bag (total weight: 1, empty weight: 1, capacity: 0/1200)
+   A coles shopping bag (total weight: 1, empty weight: 1, capacity: 0/1000)
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Elena's fishing count
+Failure! Item "Elena's fishing count" NOT stored in container "A coles shopping cart".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: A normal cheese platter
+Success! Item "A normal cheese platter" stored in container "A coles shopping cart".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+2
+A coles shopping cart (total weight: 3720, empty weight: 43, capacity: 0/0)
+   A coles shopping bag (total weight: 1001, empty weight: 1, capacity: 1000/1000)
+      A normal cheese platter (weight: 1000)
+   A backpack (total weight: 2717, empty weight: 40, capacity: 2677/5000)
+      Taylor's ex-lovers list (weight: 999)
+      Ed's forum posts (weight: 678)
+      A normal cheese platter (weight: 1000)
+   A woolworths shopping bag (total weight: 1, empty weight: 1, capacity: 0/1200)
+   A coles shopping bag (total weight: 1, empty weight: 1, capacity: 0/1000)
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+0
+Example 2
+Initialised 52 items including 20 containers.
+
+Enter the name of the container: A pouch
+"A pouch" not found. Try again.
+Enter the name of the container: A suitcase
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: A rock
+Success! Item "A rock" stored in container "A suitcase".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+2
+A suitcase (total weight: 101, empty weight: 100, capacity: 1/20000)
+   A rock (weight: 1)
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+0
+

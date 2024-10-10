@@ -1,0 +1,139 @@
+Initialised 57 items including 25 containers.
+
+Enter the name of the container: Joey's water bowl
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Vanessa's hit list
+Failure! Item "Vanessa's hit list" NOT stored in container "Joey's water bowl".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Chloe's half baked ideas
+Success! Item "Chloe's half baked ideas" stored in container "Joey's water bowl".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Sam's water pouch
+Success! Item "Sam's water pouch" stored in container "Joey's water bowl".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Robbie's final drop of sanity
+Success! Item "Robbie's final drop of sanity" stored in container "Joey's water bowl".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Gabe's Steam game library
+Success! Item "Gabe's Steam game library" stored in container "Joey's water bowl".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Liz's brain cell cluster
+Success! Item "Liz's brain cell cluster" stored in container "Joey's water bowl".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+2
+Joey's water bowl (total weight: 11, empty weight: 2, capacity: 9/20)
+   Chloe's half baked ideas (weight: 5)
+   Sam's water pouch (weight: 1)
+   Robbie's final drop of sanity (weight: 0)
+   Gabe's Steam game library (weight: 0)
+   Liz's brain cell cluster (weight: 3)
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+2
+Joey's water bowl (total weight: 11, empty weight: 2, capacity: 9/20)
+   Chloe's half baked ideas (weight: 5)
+   Sam's water pouch (weight: 1)
+   Robbie's final drop of sanity (weight: 0)
+   Gabe's Steam game library (weight: 0)
+   Liz's brain cell cluster (weight: 3)
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+2
+Joey's water bowl (total weight: 11, empty weight: 2, capacity: 9/20)
+   Chloe's half baked ideas (weight: 5)
+   Sam's water pouch (weight: 1)
+   Robbie's final drop of sanity (weight: 0)
+   Gabe's Steam game library (weight: 0)
+   Liz's brain cell cluster (weight: 3)
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+2
+Joey's water bowl (total weight: 11, empty weight: 2, capacity: 9/20)
+   Chloe's half baked ideas (weight: 5)
+   Sam's water pouch (weight: 1)
+   Robbie's final drop of sanity (weight: 0)
+   Gabe's Steam game library (weight: 0)
+   Liz's brain cell cluster (weight: 3)
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Chloe's half baked ideas
+Success! Item "Chloe's half baked ideas" stored in container "Joey's water bowl".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+2
+Joey's water bowl (total weight: 16, empty weight: 2, capacity: 14/20)
+   Chloe's half baked ideas (weight: 5)
+   Sam's water pouch (weight: 1)
+   Robbie's final drop of sanity (weight: 0)
+   Gabe's Steam game library (weight: 0)
+   Liz's brain cell cluster (weight: 3)
+   Chloe's half baked ideas (weight: 5)
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+0

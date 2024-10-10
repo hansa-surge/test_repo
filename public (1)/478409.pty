@@ -1,0 +1,150 @@
+Initialised 57 items including 25 containers.
+
+Enter the name of the container: A lab coat
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: A normal cheese platter
+Failure! Item "A normal cheese platter" NOT stored in container "A lab coat".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Pierre's daily cheese wheel
+Success! Item "Pierre's daily cheese wheel" stored in container "A lab coat".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+2
+A lab coat (total weight: 100, empty weight: 0, capacity: 0/0)
+   A small pocket (total weight: 100, empty weight: 0, capacity: 100/100)
+      Pierre's daily cheese wheel (weight: 100)
+   A medium pocket (total weight: 0, empty weight: 0, capacity: 0/200)
+   A small pocket (total weight: 0, empty weight: 0, capacity: 0/100)
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+2
+A lab coat (total weight: 100, empty weight: 0, capacity: 0/0)
+   A small pocket (total weight: 100, empty weight: 0, capacity: 100/100)
+      Pierre's daily cheese wheel (weight: 100)
+   A medium pocket (total weight: 0, empty weight: 0, capacity: 0/200)
+   A small pocket (total weight: 0, empty weight: 0, capacity: 0/100)
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Robbie's shower thoughts
+Success! Item "Robbie's shower thoughts" stored in container "A lab coat".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Crimpy's destroyed cat toys
+Success! Item "Crimpy's destroyed cat toys" stored in container "A lab coat".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Vanessa's secret gold stash
+Failure! Item "Vanessa's secret gold stash" NOT stored in container "A lab coat".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+2
+A lab coat (total weight: 277, empty weight: 0, capacity: 0/0)
+   A small pocket (total weight: 100, empty weight: 0, capacity: 100/100)
+      Pierre's daily cheese wheel (weight: 100)
+   A medium pocket (total weight: 177, empty weight: 0, capacity: 177/200)
+      Robbie's shower thoughts (weight: 150)
+      Crimpy's destroyed cat toys (weight: 27)
+   A small pocket (total weight: 0, empty weight: 0, capacity: 0/100)
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+2
+A lab coat (total weight: 277, empty weight: 0, capacity: 0/0)
+   A small pocket (total weight: 100, empty weight: 0, capacity: 100/100)
+      Pierre's daily cheese wheel (weight: 100)
+   A medium pocket (total weight: 177, empty weight: 0, capacity: 177/200)
+      Robbie's shower thoughts (weight: 150)
+      Crimpy's destroyed cat toys (weight: 27)
+   A small pocket (total weight: 0, empty weight: 0, capacity: 0/100)
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Fibonnaci's recursive call count
+Failure! Item "Fibonnaci's recursive call count" NOT stored in container "A lab coat".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Robbie's final drop of sanity
+Success! Item "Robbie's final drop of sanity" stored in container "A lab coat".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Paul's missing aura points
+Success! Item "Paul's missing aura points" stored in container "A lab coat".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+2
+A lab coat (total weight: 299, empty weight: 0, capacity: 0/0)
+   A small pocket (total weight: 100, empty weight: 0, capacity: 100/100)
+      Pierre's daily cheese wheel (weight: 100)
+      Robbie's final drop of sanity (weight: 0)
+   A medium pocket (total weight: 199, empty weight: 0, capacity: 199/200)
+      Robbie's shower thoughts (weight: 150)
+      Crimpy's destroyed cat toys (weight: 27)
+      Paul's missing aura points (weight: 22)
+   A small pocket (total weight: 0, empty weight: 0, capacity: 0/100)
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+0

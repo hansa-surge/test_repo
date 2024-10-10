@@ -1,0 +1,151 @@
+Initialised 57 items including 25 containers.
+
+Enter the name of the container: Arnaud's Oven of Crispiness
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+2
+Arnaud's Oven of Crispiness (total weight: 100, empty weight: 100, capacity: 0/250000)
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Tan's Tamagotchi Support Group
+Success! Item "Tan's Tamagotchi Support Group" stored in container "Arnaud's Oven of Crispiness".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Gabe's Steam game library
+Success! Item "Gabe's Steam game library" stored in container "Arnaud's Oven of Crispiness".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: A normal cheese platter
+Success! Item "A normal cheese platter" stored in container "Arnaud's Oven of Crispiness".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Hui's Hidden Hamster Hoard
+Success! Item "Hui's Hidden Hamster Hoard" stored in container "Arnaud's Oven of Crispiness".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Rehan's Book collection
+Success! Item "Rehan's Book collection" stored in container "Arnaud's Oven of Crispiness".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Crimpy's destroyed cat toys
+Success! Item "Crimpy's destroyed cat toys" stored in container "Arnaud's Oven of Crispiness".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Tan's Tamagotchi Support Group
+Success! Item "Tan's Tamagotchi Support Group" stored in container "Arnaud's Oven of Crispiness".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+2
+Arnaud's Oven of Crispiness (total weight: 100, empty weight: 100, capacity: 11993/250000)
+   Tan's Tamagotchi Support Group (weight: 410)
+   Gabe's Steam game library (weight: 0)
+   A normal cheese platter (weight: 1000)
+   Hui's Hidden Hamster Hoard (weight: 3141)
+   Rehan's Book collection (weight: 7005)
+   Crimpy's destroyed cat toys (weight: 27)
+   Tan's Tamagotchi Support Group (weight: 410)
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Lifi's browser tabs
+Success! Item "Lifi's browser tabs" stored in container "Arnaud's Oven of Crispiness".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Crimpy's destroyed cat toys
+Success! Item "Crimpy's destroyed cat toys" stored in container "Arnaud's Oven of Crispiness".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Fibonnaci's recursive call count
+Success! Item "Fibonnaci's recursive call count" stored in container "Arnaud's Oven of Crispiness".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Fibonnaci's recursive call count
+Success! Item "Fibonnaci's recursive call count" stored in container "Arnaud's Oven of Crispiness".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+2
+Arnaud's Oven of Crispiness (total weight: 100, empty weight: 100, capacity: 35249/250000)
+   Tan's Tamagotchi Support Group (weight: 410)
+   Gabe's Steam game library (weight: 0)
+   A normal cheese platter (weight: 1000)
+   Hui's Hidden Hamster Hoard (weight: 3141)
+   Rehan's Book collection (weight: 7005)
+   Crimpy's destroyed cat toys (weight: 27)
+   Tan's Tamagotchi Support Group (weight: 410)
+   Lifi's browser tabs (weight: 1337)
+   Crimpy's destroyed cat toys (weight: 27)
+   Fibonnaci's recursive call count (weight: 10946)
+   Fibonnaci's recursive call count (weight: 10946)
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+0

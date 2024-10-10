@@ -1,0 +1,110 @@
+Initialised 57 items including 25 containers.
+
+Enter the name of the container: Arnaud's Oven of Crispiness
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Sam's water pouch
+Success! Item "Sam's water pouch" stored in container "Arnaud's Oven of Crispiness".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Bhagya's publications
+Success! Item "Bhagya's publications" stored in container "Arnaud's Oven of Crispiness".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+2
+Arnaud's Oven of Crispiness (total weight: 100, empty weight: 100, capacity: 8003/250000)
+   Sam's water pouch (weight: 1)
+   Bhagya's publications (weight: 8002)
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Robbie's shower thoughts
+Success! Item "Robbie's shower thoughts" stored in container "Arnaud's Oven of Crispiness".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Gabe's Steam game library
+Success! Item "Gabe's Steam game library" stored in container "Arnaud's Oven of Crispiness".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+2
+Arnaud's Oven of Crispiness (total weight: 100, empty weight: 100, capacity: 8153/250000)
+   Sam's water pouch (weight: 1)
+   Bhagya's publications (weight: 8002)
+   Robbie's shower thoughts (weight: 150)
+   Gabe's Steam game library (weight: 0)
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Charlie's unread emails
+Success! Item "Charlie's unread emails" stored in container "Arnaud's Oven of Crispiness".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Fibonnaci's recursive call count
+Success! Item "Fibonnaci's recursive call count" stored in container "Arnaud's Oven of Crispiness".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Chloe's half baked ideas
+Success! Item "Chloe's half baked ideas" stored in container "Arnaud's Oven of Crispiness".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+2
+Arnaud's Oven of Crispiness (total weight: 100, empty weight: 100, capacity: 19351/250000)
+   Sam's water pouch (weight: 1)
+   Bhagya's publications (weight: 8002)
+   Robbie's shower thoughts (weight: 150)
+   Gabe's Steam game library (weight: 0)
+   Charlie's unread emails (weight: 247)
+   Fibonnaci's recursive call count (weight: 10946)
+   Chloe's half baked ideas (weight: 5)
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+0

@@ -1,0 +1,90 @@
+Initialised 57 items including 25 containers.
+
+Enter the name of the container: Hermione's Satchel
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+2
+Hermione's Satchel (total weight: 3, empty weight: 3, capacity: 0/80)
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Chloe's half baked ideas
+Success! Item "Chloe's half baked ideas" stored in container "Hermione's Satchel".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Vanessa's hit list
+Failure! Item "Vanessa's hit list" NOT stored in container "Hermione's Satchel".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Pierre's meme collection
+Failure! Item "Pierre's meme collection" NOT stored in container "Hermione's Satchel".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Pierre's funny meme collection
+Success! Item "Pierre's funny meme collection" stored in container "Hermione's Satchel".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Crimpy's destroyed cat toys
+Success! Item "Crimpy's destroyed cat toys" stored in container "Hermione's Satchel".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Chloe's half baked ideas
+Success! Item "Chloe's half baked ideas" stored in container "Hermione's Satchel".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Pierre's meme collection
+Failure! Item "Pierre's meme collection" NOT stored in container "Hermione's Satchel".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Crimpy's destroyed cat toys
+Success! Item "Crimpy's destroyed cat toys" stored in container "Hermione's Satchel".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+0

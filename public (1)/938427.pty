@@ -1,0 +1,157 @@
+Initialised 57 items including 25 containers.
+
+Enter the name of the container: Bag of Holding
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Tan's Tamagotchi Support Group
+Success! Item "Tan's Tamagotchi Support Group" stored in container "Bag of Holding".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: A rock
+Success! Item "A rock" stored in container "Bag of Holding".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+2
+Bag of Holding (total weight: 40, empty weight: 40, capacity: 411/5000)
+   Tan's Tamagotchi Support Group (weight: 410)
+   A rock (weight: 1)
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Robbie's final drop of sanity
+Success! Item "Robbie's final drop of sanity" stored in container "Bag of Holding".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Lifi's browser tabs
+Success! Item "Lifi's browser tabs" stored in container "Bag of Holding".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+2
+Bag of Holding (total weight: 40, empty weight: 40, capacity: 1748/5000)
+   Tan's Tamagotchi Support Group (weight: 410)
+   A rock (weight: 1)
+   Robbie's final drop of sanity (weight: 0)
+   Lifi's browser tabs (weight: 1337)
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Robbie's final drop of sanity
+Success! Item "Robbie's final drop of sanity" stored in container "Bag of Holding".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+2
+Bag of Holding (total weight: 40, empty weight: 40, capacity: 1748/5000)
+   Tan's Tamagotchi Support Group (weight: 410)
+   A rock (weight: 1)
+   Robbie's final drop of sanity (weight: 0)
+   Lifi's browser tabs (weight: 1337)
+   Robbie's final drop of sanity (weight: 0)
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Pierre's outdated meme collection
+Failure! Item "Pierre's outdated meme collection" NOT stored in container "Bag of Holding".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+2
+Bag of Holding (total weight: 40, empty weight: 40, capacity: 1748/5000)
+   Tan's Tamagotchi Support Group (weight: 410)
+   A rock (weight: 1)
+   Robbie's final drop of sanity (weight: 0)
+   Lifi's browser tabs (weight: 1337)
+   Robbie's final drop of sanity (weight: 0)
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Robbie's final drop of sanity
+Success! Item "Robbie's final drop of sanity" stored in container "Bag of Holding".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Lifi's browser tabs
+Success! Item "Lifi's browser tabs" stored in container "Bag of Holding".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Paul's cringe tiktok compilation
+Success! Item "Paul's cringe tiktok compilation" stored in container "Bag of Holding".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Taylor's ex-lovers list
+Success! Item "Taylor's ex-lovers list" stored in container "Bag of Holding".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Paul's cringe tiktok compilation
+Success! Item "Paul's cringe tiktok compilation" stored in container "Bag of Holding".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+0

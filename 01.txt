@@ -1,0 +1,146 @@
+Task 1: Items and containers (0.5 marks)
+In preparation for the summer break, 
+Robbie is coding up an adventure game. 
+He's asked whether you could take care of the looting aspect of the game.
+With Fibonacci as product manager, what could possibly go wrong?
+
+Task Description
+Write a program that reads items and containers from files items.csv and containers.csv, and prints the list of items.
+For this and following tasks, do not create files or write into existing files.
+As in previous assignments, you are allowed to use any standard Python feature and module. In particular, sorted can be useful here.
+We recomend you read all tasks to plan the design of your program so as to minimise the refactoring effort from task to task.
+
+Items
+An item has:
+	•	a name, and
+	•	a weight.
+We recommend you create a class to represent items.
+Containers
+A container has: 
+	•	a name,
+	•	an empty weight, i.e. their weight when they are empty, and
+	•	a weight capacity, i.e. the maximum combined weight that the container can hold.
+- Two copies of the same item or container can exist. If two items or containers have the same name, then they have the same characteristics (e.g. weight).- Throughout the assignment, all weights and weight-related measures (i.e. weight capacities) are non-negative integers.
+We recommend you create a class to represent containers.
+
+Expected output
+In the output below, notice "47 items". This is because the containers are included in this count.
+There are no user inputs in the example below.
+Initialised 47 items including 15 containers.
+
+Items:
+A normal cheese platter (weight: 1000)
+A rock (weight: 1)
+Bhagya's publications (weight: 8002)
+Charlie's unread emails (weight: 247)
+Chloe's half baked ideas (weight: 5)
+Chloe's late assignments (weight: 999999)
+Crimpy's destroyed cat toys (weight: 27)
+Ed's forum posts (weight: 678)
+Elena's fishing count (weight: 3500)
+Fibonnaci's rabbytes family tree (weight: 144)
+Fibonnaci's recursive call count (weight: 10946)
+Gabe's Steam game library (weight: 0)
+Hui's Hidden Hamster Hoard (weight: 3141)
+Lifi's browser tabs (weight: 1337)
+Liz's brain cell cluster (weight: 3)
+Michael's stack of unmarked assignments (weight: 10000)
+Paul's cringe tiktok compilation (weight: 23)
+Paul's missing aura points (weight: 22)
+Paul's only frontal lobe (weight: 9)
+Pierre's daily cheese wheel (weight: 100)
+Pierre's funny meme collection (weight: 0)
+Pierre's meme collection (weight: 9001)
+Pierre's outdated meme collection (weight: 9001)
+Pierre's secret meme collection (weight: 420)
+Rehan's Book collection (weight: 7005)
+Robbie's final drop of sanity (weight: 0)
+Robbie's shower thoughts (weight: 150)
+Sam's water pouch (weight: 1)
+Tan's Tamagotchi Support Group (weight: 410)
+Taylor's ex-lovers list (weight: 999)
+Vanessa's hit list (weight: 299)
+Vanessa's secret gold stash (weight: 2028)
+
+Containers:
+A backpack (total weight: 40, empty weight: 40, capacity: 0/5000)
+A carrybag for pets (total weight: 50, empty weight: 50, capacity: 0/2000)
+A coles shopping bag (total weight: 1, empty weight: 1, capacity: 0/1000)
+A container (total weight: 100, empty weight: 100, capacity: 0/250000)
+A delicate flower vase (total weight: 5, empty weight: 5, capacity: 0/25)
+A full bag of chips (total weight: 2, empty weight: 2, capacity: 0/5)
+A large pouch (total weight: 3, empty weight: 3, capacity: 0/80)
+A medium pocket (total weight: 0, empty weight: 0, capacity: 0/200)
+A small pocket (total weight: 0, empty weight: 0, capacity: 0/100)
+A small pouch (total weight: 1, empty weight: 1, capacity: 0/20)
+A suitcase (total weight: 100, empty weight: 100, capacity: 0/20000)
+A wheelbarrow (total weight: 100, empty weight: 100, capacity: 0/10000)
+A woolworths shopping bag (total weight: 1, empty weight: 1, capacity: 0/1200)
+Joey's water bowl (total weight: 2, empty weight: 2, capacity: 0/20)
+One of those blue ikea tote bags (total weight: 3, empty weight: 3, capacity: 0/8000)
+
+
+
+
+CODE 
+# Create class Item
+class Item:
+    def __init__(self, name, weight):
+        self.name = name
+        self.weight = weight
+
+    # String for the output of weight
+    def __str__(self):
+        return f"{self.name} (weight: {self.weight})"
+
+class Container:
+    def __init__(self, name, empty, capacity):
+        self.initial = 0  # Containers are empty to start off with
+        self.name = name
+        self.empty = empty
+        self.capacity = capacity
+
+    def __str__(self):
+        return (f"{self.name} (total weight: {self.empty + self.initial}, "
+                f"empty weight: {self.empty}, capacity: {self.initial}/{self.capacity})")
+
+# Read CSV files
+import csv
+
+def read_file(file_path, type):
+    item_list = []
+
+    with open(file_path, 'r') as file:
+        reader = csv.reader(file)
+        next(reader)  # Skip the first row (header)
+        for row in reader:
+            if type == 'item':  # Process items
+                name, weight = row
+                item_list.append(Item(name, int(weight)))
+            elif type == 'container':  # Process containers
+                name, empty, capacity = row
+                item_list.append(Container(name, int(empty), int(capacity)))
+
+    return item_list
+
+def print_read_file(items, containers):
+    print(f"Initialised {len(items)+len(containers)} items including {len(containers)} containers.\n")
+
+    print("Items:")
+    for item in sorted(items, key=lambda x: x.name):
+        print(item)
+
+    print("\nContainers:")
+    for container in sorted(containers, key=lambda x: x.name):
+        print(container)
+
+if __name__ == "__main__":
+    items = read_file('items.csv', 'item')  
+ 
+    containers = read_file('containers.csv', 'container')  
+
+ 
+    print_read_file(items, containers)
+    print("")
+
+

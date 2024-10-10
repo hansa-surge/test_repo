@@ -1,0 +1,130 @@
+Initialised 57 items including 25 containers.
+
+Enter the name of the container: Pierre's Breadbag of Yuminess
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Hui's Hidden Hamster Hoard
+Success! Item "Hui's Hidden Hamster Hoard" stored in container "Pierre's Breadbag of Yuminess".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: A normal cheese platter
+Success! Item "A normal cheese platter" stored in container "Pierre's Breadbag of Yuminess".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Fibonnaci's rabbytes family tree
+Success! Item "Fibonnaci's rabbytes family tree" stored in container "Pierre's Breadbag of Yuminess".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Charlie's unread emails
+Success! Item "Charlie's unread emails" stored in container "Pierre's Breadbag of Yuminess".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Robbie's shower thoughts
+Success! Item "Robbie's shower thoughts" stored in container "Pierre's Breadbag of Yuminess".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Lifi's browser tabs
+Failure! Item "Lifi's browser tabs" NOT stored in container "Pierre's Breadbag of Yuminess".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Vanessa's hit list
+Success! Item "Vanessa's hit list" stored in container "Pierre's Breadbag of Yuminess".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+2
+Pierre's Breadbag of Yuminess (total weight: 40, empty weight: 40, capacity: 4981/5000)
+   Hui's Hidden Hamster Hoard (weight: 3141)
+   A normal cheese platter (weight: 1000)
+   Fibonnaci's rabbytes family tree (weight: 144)
+   Charlie's unread emails (weight: 247)
+   Robbie's shower thoughts (weight: 150)
+   Vanessa's hit list (weight: 299)
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: A rock
+Success! Item "A rock" stored in container "Pierre's Breadbag of Yuminess".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: A normal cheese platter
+Failure! Item "A normal cheese platter" NOT stored in container "Pierre's Breadbag of Yuminess".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Pierre's funny meme collection
+Success! Item "Pierre's funny meme collection" stored in container "Pierre's Breadbag of Yuminess".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+2
+Pierre's Breadbag of Yuminess (total weight: 40, empty weight: 40, capacity: 4982/5000)
+   Hui's Hidden Hamster Hoard (weight: 3141)
+   A normal cheese platter (weight: 1000)
+   Fibonnaci's rabbytes family tree (weight: 144)
+   Charlie's unread emails (weight: 247)
+   Robbie's shower thoughts (weight: 150)
+   Vanessa's hit list (weight: 299)
+   A rock (weight: 1)
+   Pierre's funny meme collection (weight: 0)
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+0

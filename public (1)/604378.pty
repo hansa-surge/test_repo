@@ -1,0 +1,151 @@
+Initialised 57 items including 25 containers.
+
+Enter the name of the container: A lab coat
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Pierre's meme collection
+Failure! Item "Pierre's meme collection" NOT stored in container "A lab coat".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Paul's missing aura points
+Success! Item "Paul's missing aura points" stored in container "A lab coat".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+2
+A lab coat (total weight: 22, empty weight: 0, capacity: 0/0)
+   A small pocket (total weight: 22, empty weight: 0, capacity: 22/100)
+      Paul's missing aura points (weight: 22)
+   A medium pocket (total weight: 0, empty weight: 0, capacity: 0/200)
+   A small pocket (total weight: 0, empty weight: 0, capacity: 0/100)
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Pierre's funny meme collection
+Success! Item "Pierre's funny meme collection" stored in container "A lab coat".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+2
+A lab coat (total weight: 22, empty weight: 0, capacity: 0/0)
+   A small pocket (total weight: 22, empty weight: 0, capacity: 22/100)
+      Paul's missing aura points (weight: 22)
+      Pierre's funny meme collection (weight: 0)
+   A medium pocket (total weight: 0, empty weight: 0, capacity: 0/200)
+   A small pocket (total weight: 0, empty weight: 0, capacity: 0/100)
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Crimpy's destroyed cat toys
+Success! Item "Crimpy's destroyed cat toys" stored in container "A lab coat".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Gabe's Steam game library
+Success! Item "Gabe's Steam game library" stored in container "A lab coat".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Fibonnaci's rabbytes family tree
+Success! Item "Fibonnaci's rabbytes family tree" stored in container "A lab coat".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Paul's cringe tiktok compilation
+Success! Item "Paul's cringe tiktok compilation" stored in container "A lab coat".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+2
+A lab coat (total weight: 216, empty weight: 0, capacity: 0/0)
+   A small pocket (total weight: 72, empty weight: 0, capacity: 72/100)
+      Paul's missing aura points (weight: 22)
+      Pierre's funny meme collection (weight: 0)
+      Crimpy's destroyed cat toys (weight: 27)
+      Gabe's Steam game library (weight: 0)
+      Paul's cringe tiktok compilation (weight: 23)
+   A medium pocket (total weight: 144, empty weight: 0, capacity: 144/200)
+      Fibonnaci's rabbytes family tree (weight: 144)
+   A small pocket (total weight: 0, empty weight: 0, capacity: 0/100)
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Paul's only frontal lobe
+Success! Item "Paul's only frontal lobe" stored in container "A lab coat".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Paul's only frontal lobe
+Success! Item "Paul's only frontal lobe" stored in container "A lab coat".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Paul's missing aura points
+Success! Item "Paul's missing aura points" stored in container "A lab coat".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Robbie's shower thoughts
+Failure! Item "Robbie's shower thoughts" NOT stored in container "A lab coat".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+0

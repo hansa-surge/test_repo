@@ -1,0 +1,78 @@
+Initialised 57 items including 25 containers.
+
+Enter the name of the container: ==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+Pierre's Breadbag of Yuminess (total weight: 40, empty weight: 40, capacity: 0/5000)
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+Enter the name of the item: Success! Item "A normal cheese platter" stored in container "Pierre's Breadbag of Yuminess".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+Pierre's Breadbag of Yuminess (total weight: 40, empty weight: 40, capacity: 1000/5000)
+   A normal cheese platter (weight: 1000)
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+Enter the name of the item: Success! Item "Hui's Hidden Hamster Hoard" stored in container "Pierre's Breadbag of Yuminess".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+Enter the name of the item: Success! Item "Fibonnaci's rabbytes family tree" stored in container "Pierre's Breadbag of Yuminess".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+Pierre's Breadbag of Yuminess (total weight: 40, empty weight: 40, capacity: 4285/5000)
+   A normal cheese platter (weight: 1000)
+   Hui's Hidden Hamster Hoard (weight: 3141)
+   Fibonnaci's rabbytes family tree (weight: 144)
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+Pierre's Breadbag of Yuminess (total weight: 40, empty weight: 40, capacity: 4285/5000)
+   A normal cheese platter (weight: 1000)
+   Hui's Hidden Hamster Hoard (weight: 3141)
+   Fibonnaci's rabbytes family tree (weight: 144)
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+Enter the name of the item: Success! Item "Chloe's half baked ideas" stored in container "Pierre's Breadbag of Yuminess".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+Enter the name of the item: Success! Item "Robbie's shower thoughts" stored in container "Pierre's Breadbag of Yuminess".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================

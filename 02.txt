@@ -1,0 +1,372 @@
+Task 2: Looting items (2 marks)
+"Now all we need to do is get the user to pick up loot and store it in the container!" Robbie explains. "Bada bing, bada boom. It's in the bag! Get it?". 
+You do.
+
+Task Description
+After reading all items and containers, do not print them, but instead ask the user for a container to pick for the adventure. For example,
+
+Enter the name of the container: A backpack
+Main menu
+Then, a menu with three options will be shown repeatedly. The program prompt of the main menu looks like:
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1. Loot item.
+Upon entering 1, the program will then ask for the name of an item to loot. If the item can fit in the container given the remaining capacity, the program indicates so, as shown below.
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: A rock
+Success! Item "A rock" stored in container "A backpack".
+If, instead, the remaining capacity is not sufficient to store the item, the item is not looted:
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Fibonnaci's recursive call count
+Failure! Item "Fibonnaci's recursive call count" NOT stored in container "A backpack".
+If the item's name is not one of the known items, then the user is asked for the name again:
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: A smaller Fibonnaci's recursive call count
+"A smaller Fibonnaci's recursive call count" not found. Try again.
+Enter the name of the item: Fibonnaci's rabbytes family tree
+Success! Item "Fibonnaci's rabbytes family tree" stored in container "A backpack".
+See example 1 for a complete example.
+Consider using exceptions (including custom ones) to handle the case where a container cannot store an item.
+2. List looted items.
+Upon entering 2, the program will then print the container and the list of content, in the order they have been looted:
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+2
+A backpack (total weight: 186, empty weight: 40, capacity: 146/5000)
+   A rock (weight: 1)
+   Fibonnaci's rabbytes family tree (weight: 144)
+   A rock (weight: 1)
+Notice how the total weight and capacity of the backpack are updated based on the contents.
+Examples
+User inputs are in bold font below.
+Example 1
+Initialised 47 items including 15 containers.
+
+Enter the name of the container: A backpack
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: A rock
+Success! Item "A rock" stored in container "A backpack".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Fibonnaci's recursive call count
+Failure! Item "Fibonnaci's recursive call count" NOT stored in container "A backpack".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+2
+A backpack (total weight: 41, empty weight: 40, capacity: 1/5000)
+   A rock (weight: 1)
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: A smaller Fibonnaci's recursive call count
+"A smaller Fibonnaci's recursive call count" not found. Try again.
+Enter the name of the item: Fibonnaci's rabbytes family tree
+Success! Item "Fibonnaci's rabbytes family tree" stored in container "A backpack".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+2
+A backpack (total weight: 185, empty weight: 40, capacity: 145/5000)
+   A rock (weight: 1)
+   Fibonnaci's rabbytes family tree (weight: 144)
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: A rock
+Success! Item "A rock" stored in container "A backpack".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+2
+A backpack (total weight: 186, empty weight: 40, capacity: 146/5000)
+   A rock (weight: 1)
+   Fibonnaci's rabbytes family tree (weight: 144)
+   A rock (weight: 1)
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+0
+
+Example 2
+Initialised 47 items including 15 containers.
+
+Enter the name of the container: A bag
+"A bag" not found. Try again.
+Enter the name of the container: A rock
+"A rock" not found. Try again.
+Enter the name of the container: Joey's water bowl
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Paul's only frontal lobe
+Success! Item "Paul's only frontal lobe" stored in container "Joey's water bowl".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Liz's brain cell cluster
+Success! Item "Liz's brain cell cluster" stored in container "Joey's water bowl".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Paul's only frontal lobe
+Failure! Item "Paul's only frontal lobe" NOT stored in container "Joey's water bowl".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Liz's brain cell cluster
+Success! Item "Liz's brain cell cluster" stored in container "Joey's water bowl".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+2
+Joey's water bowl (total weight: 17, empty weight: 2, capacity: 15/20)
+   Paul's only frontal lobe (weight: 9)
+   Liz's brain cell cluster (weight: 3)
+   Liz's brain cell cluster (weight: 3)
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Chloe's half baked ideas
+Success! Item "Chloe's half baked ideas" stored in container "Joey's water bowl".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Sam's water pouch
+Failure! Item "Sam's water pouch" NOT stored in container "Joey's water bowl".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Pierre's funny meme collection
+Success! Item "Pierre's funny meme collection" stored in container "Joey's water bowl".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+2
+Joey's water bowl (total weight: 22, empty weight: 2, capacity: 20/20)
+   Paul's only frontal lobe (weight: 9)
+   Liz's brain cell cluster (weight: 3)
+   Liz's brain cell cluster (weight: 3)
+   Chloe's half baked ideas (weight: 5)
+   Pierre's funny meme collection (weight: 0)
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+0
+
+
+
+
+
+Code 
+# Read CSV files
+import csv
+
+def read_file(file_path, type):
+    item_list = []
+
+    with open(file_path, 'r') as file:
+        reader = csv.reader(file)
+        next(reader)  # Skip the first row (header)
+        for row in reader:
+            if type == 'item':  # Process items
+                name, weight = row
+                item_list.append(Item(name, int(weight)))
+            elif type == 'container':  # Process containers
+                name, empty, capacity = row
+                item_list.append(Container(name, int(empty), int(capacity)))
+
+    return item_list
+
+# Create class Item
+class Item:
+    def __init__(self, name, weight):
+        self.name = name
+        self.weight = weight
+
+    # String for the output of weight
+    def __str__(self):
+        return f"{self.name} (weight: {self.weight})"
+
+# Create class Container
+class Container:
+    def __init__(self, name, empty, capacity):
+        self.name = name
+        self.empty = empty
+        self.capacity = capacity
+        self.current_weight = 0  # Track current weight of items inside the container
+        self.items = []  # List to store looted items
+
+    def __str__(self):
+        return (f"{self.name} (total weight: {self.empty + self.current_weight}, "
+                f"empty weight: {self.empty}, capacity: {self.current_weight}/{self.capacity})")
+
+    # Method to loot item
+    def loot_item(self, item):
+        if item.weight + self.current_weight <= self.capacity:
+            self.items.append(item)
+            self.current_weight += item.weight
+            print(f"Success! Item \"{item.name}\" stored in container \"{self.name}\".")
+        else:
+            print(f"Failure! Item \"{item.name}\" NOT stored in container \"{self.name}\".")
+
+    # Method to list looted items
+    def list_looted_items(self):
+            print(f"{self.name} (total weight: {self.empty + self.current_weight}, empty weight: {self.empty}, capacity: {self.current_weight}/{self.capacity})")
+            for item in self.items:
+                print(f"   {item}")
+
+# Find an item by name
+def find_item_by_name(name, items):
+    for item in items:
+        if item.name == name:
+            return item
+    return None
+def print_read_file(items, containers):
+    print(f"Initialised {len(items)+len(containers)} items including {len(containers)} containers.\n")
+
+def main():
+    # Read items and containers
+    items = read_file('items.csv', 'item')
+    containers = read_file('containers.csv', 'container')
+    print_read_file(items,containers)
+    # Select a container
+    while True:
+        container_name = input("Enter the name of the container: ")
+        selected_container = find_item_by_name(container_name, containers)
+
+        if selected_container:
+            break  # Break the loop if a valid container is found
+        else:
+            print(f"\"{container_name}\" not found. Try again.")
+
+    # Main menu loop
+    while True:
+        print("==================================")
+        print("Enter your choice:")
+        print("1. Loot item.")
+        print("2. List looted items.")
+        print("0. Quit.")
+        print("==================================")
+        choice = input()
+
+        if choice == "1":
+            # Loot an item
+            while True:
+                item_name = input("Enter the name of the item: ")
+                item = find_item_by_name(item_name, items)
+
+                if item:
+                    selected_container.loot_item(item)
+                    break  # Break the loop once a valid item is found
+                else:
+                    print(f"\"{item_name}\" not found. Try again.")
+
+        elif choice == "2":
+            # List looted items
+            selected_container.list_looted_items()
+
+        elif choice == "0":
+           
+            break
+
+        else:
+            print("Invalid choice. Try again.")
+
+if __name__ == "__main__":
+    main()
+

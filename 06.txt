@@ -1,0 +1,666 @@
+Task 6: Containers are items too (1 mark)
+"What do you mean the program won't let me pick up a container? Containers are items too! Always have been!" fulminates Fibonacci. "Anyway, if the program doesn't allow it yet, it's only a small matter of programming."
+"And we should be able to make pyramids of them and create an infinite capacity loophole. Handy Haversacks go brrrrrr," deadpans Robbie.
+"Ooh, recursion, that's brilliant! Let's get the student to do that! Add to cart!", exults Fibo.🤜🤖🤛
+A few moments later 🕰️
+"I'm sorry, mate", apologises Robbie. "This one is kind of on me. I understand if you've had enough. You probably have better things to do. Anyway, you know the green tick is a lie, right?" ✅🍰
+Robbie makes a valid point. This is going to take hours. What about your other assignments?
+
+Task Description
+Expand your program so that:
+	•	Containers can be looted and stored just like other items.
+	•	When looting and storing an item (including containers), it is placed in the first possible container:
+	•	if it can be stored in the current container, it is,
+	•	otherwise, containers (and other containers within) placed in the current container are tested in the order in which they were stored to determine if the item can be stored there, and
+	•	any container inside the current container is tested before any container at the same level as the current container.
+	•	Items more than one level inside a container affect the weight of all containers containing this item (but a magic container will also affect this). This means that if item X is put in non-magic container B, itself inside non-magic container A, then the weight of X both applies to A and B, and they both must have enough capacity. However, if B is magic, then the weight of X only applies to B. See Examples 1 and 2.
+This type of recursive search is called a preorder depth-first search.
+
+Examples
+User inputs are in bold font below.
+Example 1
+Initialised 60 items including 28 containers.
+
+Enter the name of the container: One of those blue ikea tote bags
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: A container
+Success! Item "A container" stored in container "One of those blue ikea tote bags".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+2
+One of those blue ikea tote bags (total weight: 103, empty weight: 3, capacity: 100/8000)
+   A container (total weight: 100, empty weight: 100, capacity: 0/250000)
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Hui's Hidden Hamster Hoard
+Success! Item "Hui's Hidden Hamster Hoard" stored in container "One of those blue ikea tote bags".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+2
+One of those blue ikea tote bags (total weight: 3244, empty weight: 3, capacity: 3241/8000)
+   A container (total weight: 100, empty weight: 100, capacity: 0/250000)
+   Hui's Hidden Hamster Hoard (weight: 3141)
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Fibonnaci's recursive call count
+Failure! Item "Fibonnaci's recursive call count" NOT stored in container "One of those blue ikea tote bags".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Rehan's Book collection
+Failure! Item "Rehan's Book collection" NOT stored in container "One of those blue ikea tote bags".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+2
+One of those blue ikea tote bags (total weight: 3244, empty weight: 3, capacity: 3241/8000)
+   A container (total weight: 100, empty weight: 100, capacity: 0/250000)
+   Hui's Hidden Hamster Hoard (weight: 3141)
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+0
+
+Example 2
+Initialised 60 items including 28 containers.
+
+Enter the name of the container: A small pouch
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Bag of Holding
+Failure! Item "Bag of Holding" NOT stored in container "A small pouch".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Hermione's Satchel
+Success! Item "Hermione's Satchel" stored in container "A small pouch".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+2
+A small pouch (total weight: 4, empty weight: 1, capacity: 3/20)
+   Hermione's Satchel (total weight: 3, empty weight: 3, capacity: 0/80)
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Paul's only frontal lobe
+Success! Item "Paul's only frontal lobe" stored in container "A small pouch".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+2
+A small pouch (total weight: 13, empty weight: 1, capacity: 12/20)
+   Hermione's Satchel (total weight: 3, empty weight: 3, capacity: 0/80)
+   Paul's only frontal lobe (weight: 9)
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Paul's only frontal lobe
+Success! Item "Paul's only frontal lobe" stored in container "A small pouch".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+2
+A small pouch (total weight: 13, empty weight: 1, capacity: 12/20)
+   Hermione's Satchel (total weight: 3, empty weight: 3, capacity: 9/80)
+      Paul's only frontal lobe (weight: 9)
+   Paul's only frontal lobe (weight: 9)
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Chloe's half baked ideas
+Success! Item "Chloe's half baked ideas" stored in container "A small pouch".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Liz's brain cell cluster
+Success! Item "Liz's brain cell cluster" stored in container "A small pouch".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+2
+A small pouch (total weight: 21, empty weight: 1, capacity: 20/20)
+   Hermione's Satchel (total weight: 3, empty weight: 3, capacity: 9/80)
+      Paul's only frontal lobe (weight: 9)
+   Paul's only frontal lobe (weight: 9)
+   Chloe's half baked ideas (weight: 5)
+   Liz's brain cell cluster (weight: 3)
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Gabe's Steam game library
+Success! Item "Gabe's Steam game library" stored in container "A small pouch".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+2
+A small pouch (total weight: 21, empty weight: 1, capacity: 20/20)
+   Hermione's Satchel (total weight: 3, empty weight: 3, capacity: 9/80)
+      Paul's only frontal lobe (weight: 9)
+   Paul's only frontal lobe (weight: 9)
+   Chloe's half baked ideas (weight: 5)
+   Liz's brain cell cluster (weight: 3)
+   Gabe's Steam game library (weight: 0)
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Robbie's shower thoughts
+Failure! Item "Robbie's shower thoughts" NOT stored in container "A small pouch".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+2
+A small pouch (total weight: 21, empty weight: 1, capacity: 20/20)
+   Hermione's Satchel (total weight: 3, empty weight: 3, capacity: 9/80)
+      Paul's only frontal lobe (weight: 9)
+   Paul's only frontal lobe (weight: 9)
+   Chloe's half baked ideas (weight: 5)
+   Liz's brain cell cluster (weight: 3)
+   Gabe's Steam game library (weight: 0)
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Vanessa's hit list
+Failure! Item "Vanessa's hit list" NOT stored in container "A small pouch".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Bag of Holding
+Success! Item "Bag of Holding" stored in container "A small pouch".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+2
+A small pouch (total weight: 21, empty weight: 1, capacity: 20/20)
+   Hermione's Satchel (total weight: 3, empty weight: 3, capacity: 49/80)
+      Paul's only frontal lobe (weight: 9)
+      Bag of Holding (total weight: 40, empty weight: 40, capacity: 0/5000)
+   Paul's only frontal lobe (weight: 9)
+   Chloe's half baked ideas (weight: 5)
+   Liz's brain cell cluster (weight: 3)
+   Gabe's Steam game library (weight: 0)
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Vanessa's hit list
+Success! Item "Vanessa's hit list" stored in container "A small pouch".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+2
+A small pouch (total weight: 21, empty weight: 1, capacity: 20/20)
+   Hermione's Satchel (total weight: 3, empty weight: 3, capacity: 49/80)
+      Paul's only frontal lobe (weight: 9)
+      Bag of Holding (total weight: 40, empty weight: 40, capacity: 299/5000)
+         Vanessa's hit list (weight: 299)
+   Paul's only frontal lobe (weight: 9)
+   Chloe's half baked ideas (weight: 5)
+   Liz's brain cell cluster (weight: 3)
+   Gabe's Steam game library (weight: 0)
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Arnaud's Oven of Crispiness
+Success! Item "Arnaud's Oven of Crispiness" stored in container "A small pouch".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Lifi's browser tabs
+Success! Item "Lifi's browser tabs" stored in container "A small pouch".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+2
+A small pouch (total weight: 21, empty weight: 1, capacity: 20/20)
+   Hermione's Satchel (total weight: 3, empty weight: 3, capacity: 49/80)
+      Paul's only frontal lobe (weight: 9)
+      Bag of Holding (total weight: 40, empty weight: 40, capacity: 1736/5000)
+         Vanessa's hit list (weight: 299)
+         Arnaud's Oven of Crispiness (total weight: 100, empty weight: 100, capacity: 0/250000)
+         Lifi's browser tabs (weight: 1337)
+   Paul's only frontal lobe (weight: 9)
+   Chloe's half baked ideas (weight: 5)
+   Liz's brain cell cluster (weight: 3)
+   Gabe's Steam game library (weight: 0)
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Pierre's outdated meme collection
+Success! Item "Pierre's outdated meme collection" stored in container "A small pouch".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+2
+A small pouch (total weight: 21, empty weight: 1, capacity: 20/20)
+   Hermione's Satchel (total weight: 3, empty weight: 3, capacity: 49/80)
+      Paul's only frontal lobe (weight: 9)
+      Bag of Holding (total weight: 40, empty weight: 40, capacity: 1736/5000)
+         Vanessa's hit list (weight: 299)
+         Arnaud's Oven of Crispiness (total weight: 100, empty weight: 100, capacity: 9001/250000)
+            Pierre's outdated meme collection (weight: 9001)
+         Lifi's browser tabs (weight: 1337)
+   Paul's only frontal lobe (weight: 9)
+   Chloe's half baked ideas (weight: 5)
+   Liz's brain cell cluster (weight: 3)
+   Gabe's Steam game library (weight: 0)
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+0
+
+Example 3
+Initialised 60 items including 28 containers.
+
+Enter the name of the container: The Stomach of that Penguin from Madagascar
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: A small pouch
+Success! Item "A small pouch" stored in container "The Stomach of that Penguin from Madagascar".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Rambo's Cargo Pants
+Success! Item "Rambo's Cargo Pants" stored in container "The Stomach of that Penguin from Madagascar".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+2
+The Stomach of that Penguin from Madagascar (total weight: 3, empty weight: 3, capacity: 1/80)
+   A small pouch (total weight: 1, empty weight: 1, capacity: 0/20)
+   Rambo's Cargo Pants (total weight: 0, empty weight: 0, capacity: 0/0)
+      A small pocket (total weight: 0, empty weight: 0, capacity: 0/100)
+      A medium pocket (total weight: 0, empty weight: 0, capacity: 0/200)
+      A medium pocket (total weight: 0, empty weight: 0, capacity: 0/200)
+      A small pocket (total weight: 0, empty weight: 0, capacity: 0/100)
+      A medium pocket (total weight: 0, empty weight: 0, capacity: 0/200)
+      A medium pocket (total weight: 0, empty weight: 0, capacity: 0/200)
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Robbie's shower thoughts
+Success! Item "Robbie's shower thoughts" stored in container "The Stomach of that Penguin from Madagascar".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Pierre's daily cheese wheel
+Success! Item "Pierre's daily cheese wheel" stored in container "The Stomach of that Penguin from Madagascar".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+2
+The Stomach of that Penguin from Madagascar (total weight: 3, empty weight: 3, capacity: 1/80)
+   A small pouch (total weight: 1, empty weight: 1, capacity: 0/20)
+   Rambo's Cargo Pants (total weight: 0, empty weight: 0, capacity: 0/0)
+      A small pocket (total weight: 100, empty weight: 0, capacity: 100/100)
+         Pierre's daily cheese wheel (weight: 100)
+      A medium pocket (total weight: 150, empty weight: 0, capacity: 150/200)
+         Robbie's shower thoughts (weight: 150)
+      A medium pocket (total weight: 0, empty weight: 0, capacity: 0/200)
+      A small pocket (total weight: 0, empty weight: 0, capacity: 0/100)
+      A medium pocket (total weight: 0, empty weight: 0, capacity: 0/200)
+      A medium pocket (total weight: 0, empty weight: 0, capacity: 0/200)
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Paul's cringe tiktok compilation
+Success! Item "Paul's cringe tiktok compilation" stored in container "The Stomach of that Penguin from Madagascar".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Crimpy's destroyed cat toys
+Success! Item "Crimpy's destroyed cat toys" stored in container "The Stomach of that Penguin from Madagascar".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+2
+The Stomach of that Penguin from Madagascar (total weight: 3, empty weight: 3, capacity: 51/80)
+   A small pouch (total weight: 1, empty weight: 1, capacity: 0/20)
+   Rambo's Cargo Pants (total weight: 0, empty weight: 0, capacity: 0/0)
+      A small pocket (total weight: 100, empty weight: 0, capacity: 100/100)
+         Pierre's daily cheese wheel (weight: 100)
+      A medium pocket (total weight: 150, empty weight: 0, capacity: 150/200)
+         Robbie's shower thoughts (weight: 150)
+      A medium pocket (total weight: 0, empty weight: 0, capacity: 0/200)
+      A small pocket (total weight: 0, empty weight: 0, capacity: 0/100)
+      A medium pocket (total weight: 0, empty weight: 0, capacity: 0/200)
+      A medium pocket (total weight: 0, empty weight: 0, capacity: 0/200)
+   Paul's cringe tiktok compilation (weight: 23)
+   Crimpy's destroyed cat toys (weight: 27)
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Paul's missing aura points
+Success! Item "Paul's missing aura points" stored in container "The Stomach of that Penguin from Madagascar".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+2
+The Stomach of that Penguin from Madagascar (total weight: 3, empty weight: 3, capacity: 73/80)
+   A small pouch (total weight: 1, empty weight: 1, capacity: 0/20)
+   Rambo's Cargo Pants (total weight: 0, empty weight: 0, capacity: 0/0)
+      A small pocket (total weight: 100, empty weight: 0, capacity: 100/100)
+         Pierre's daily cheese wheel (weight: 100)
+      A medium pocket (total weight: 150, empty weight: 0, capacity: 150/200)
+         Robbie's shower thoughts (weight: 150)
+      A medium pocket (total weight: 0, empty weight: 0, capacity: 0/200)
+      A small pocket (total weight: 0, empty weight: 0, capacity: 0/100)
+      A medium pocket (total weight: 0, empty weight: 0, capacity: 0/200)
+      A medium pocket (total weight: 0, empty weight: 0, capacity: 0/200)
+   Paul's cringe tiktok compilation (weight: 23)
+   Crimpy's destroyed cat toys (weight: 27)
+   Paul's missing aura points (weight: 22)
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Paul's only frontal lobe
+Success! Item "Paul's only frontal lobe" stored in container "The Stomach of that Penguin from Madagascar".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+2
+The Stomach of that Penguin from Madagascar (total weight: 3, empty weight: 3, capacity: 73/80)
+   A small pouch (total weight: 1, empty weight: 1, capacity: 0/20)
+   Rambo's Cargo Pants (total weight: 0, empty weight: 0, capacity: 0/0)
+      A small pocket (total weight: 100, empty weight: 0, capacity: 100/100)
+         Pierre's daily cheese wheel (weight: 100)
+      A medium pocket (total weight: 159, empty weight: 0, capacity: 159/200)
+         Robbie's shower thoughts (weight: 150)
+         Paul's only frontal lobe (weight: 9)
+      A medium pocket (total weight: 0, empty weight: 0, capacity: 0/200)
+      A small pocket (total weight: 0, empty weight: 0, capacity: 0/100)
+      A medium pocket (total weight: 0, empty weight: 0, capacity: 0/200)
+      A medium pocket (total weight: 0, empty weight: 0, capacity: 0/200)
+   Paul's cringe tiktok compilation (weight: 23)
+   Crimpy's destroyed cat toys (weight: 27)
+   Paul's missing aura points (weight: 22)
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Robbie's final drop of sanity
+Success! Item "Robbie's final drop of sanity" stored in container "The Stomach of that Penguin from Madagascar".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+2
+The Stomach of that Penguin from Madagascar (total weight: 3, empty weight: 3, capacity: 73/80)
+   A small pouch (total weight: 1, empty weight: 1, capacity: 0/20)
+   Rambo's Cargo Pants (total weight: 0, empty weight: 0, capacity: 0/0)
+      A small pocket (total weight: 100, empty weight: 0, capacity: 100/100)
+         Pierre's daily cheese wheel (weight: 100)
+      A medium pocket (total weight: 159, empty weight: 0, capacity: 159/200)
+         Robbie's shower thoughts (weight: 150)
+         Paul's only frontal lobe (weight: 9)
+      A medium pocket (total weight: 0, empty weight: 0, capacity: 0/200)
+      A small pocket (total weight: 0, empty weight: 0, capacity: 0/100)
+      A medium pocket (total weight: 0, empty weight: 0, capacity: 0/200)
+      A medium pocket (total weight: 0, empty weight: 0, capacity: 0/200)
+   Paul's cringe tiktok compilation (weight: 23)
+   Crimpy's destroyed cat toys (weight: 27)
+   Paul's missing aura points (weight: 22)
+   Robbie's final drop of sanity (weight: 0)
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: A small pouch
+Success! Item "A small pouch" stored in container "The Stomach of that Penguin from Madagascar".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+2
+The Stomach of that Penguin from Madagascar (total weight: 3, empty weight: 3, capacity: 74/80)
+   A small pouch (total weight: 1, empty weight: 1, capacity: 0/20)
+   Rambo's Cargo Pants (total weight: 0, empty weight: 0, capacity: 0/0)
+      A small pocket (total weight: 100, empty weight: 0, capacity: 100/100)
+         Pierre's daily cheese wheel (weight: 100)
+      A medium pocket (total weight: 159, empty weight: 0, capacity: 159/200)
+         Robbie's shower thoughts (weight: 150)
+         Paul's only frontal lobe (weight: 9)
+      A medium pocket (total weight: 0, empty weight: 0, capacity: 0/200)
+      A small pocket (total weight: 0, empty weight: 0, capacity: 0/100)
+      A medium pocket (total weight: 0, empty weight: 0, capacity: 0/200)
+      A medium pocket (total weight: 0, empty weight: 0, capacity: 0/200)
+   Paul's cringe tiktok compilation (weight: 23)
+   Crimpy's destroyed cat toys (weight: 27)
+   Paul's missing aura points (weight: 22)
+   Robbie's final drop of sanity (weight: 0)
+   A small pouch (total weight: 1, empty weight: 1, capacity: 0/20)
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Handy Haversack
+Success! Item "Handy Haversack" stored in container "The Stomach of that Penguin from Madagascar".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+2
+The Stomach of that Penguin from Madagascar (total weight: 3, empty weight: 3, capacity: 79/80)
+   A small pouch (total weight: 1, empty weight: 1, capacity: 0/20)
+   Rambo's Cargo Pants (total weight: 0, empty weight: 0, capacity: 0/0)
+      A small pocket (total weight: 100, empty weight: 0, capacity: 100/100)
+         Pierre's daily cheese wheel (weight: 100)
+      A medium pocket (total weight: 159, empty weight: 0, capacity: 159/200)
+         Robbie's shower thoughts (weight: 150)
+         Paul's only frontal lobe (weight: 9)
+      A medium pocket (total weight: 0, empty weight: 0, capacity: 0/200)
+      A small pocket (total weight: 0, empty weight: 0, capacity: 0/100)
+      A medium pocket (total weight: 0, empty weight: 0, capacity: 0/200)
+      A medium pocket (total weight: 0, empty weight: 0, capacity: 0/200)
+   Paul's cringe tiktok compilation (weight: 23)
+   Crimpy's destroyed cat toys (weight: 27)
+   Paul's missing aura points (weight: 22)
+   Robbie's final drop of sanity (weight: 0)
+   A small pouch (total weight: 1, empty weight: 1, capacity: 0/20)
+   Handy Haversack (total weight: 5, empty weight: 5, capacity: 0/0)
+      A small pouch (total weight: 1, empty weight: 1, capacity: 0/20)
+      A large pouch (total weight: 3, empty weight: 3, capacity: 0/80)
+      A small pouch (total weight: 1, empty weight: 1, capacity: 0/20)
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Vanessa's hit list
+Failure! Item "Vanessa's hit list" NOT stored in container "The Stomach of that Penguin from Madagascar".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+0
+

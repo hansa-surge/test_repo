@@ -1,0 +1,130 @@
+Initialised 57 items including 25 containers.
+
+Enter the name of the container: Bag of Holding
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+2
+Bag of Holding (total weight: 40, empty weight: 40, capacity: 0/5000)
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Sam's water pouch
+Success! Item "Sam's water pouch" stored in container "Bag of Holding".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Vanessa's secret gold stash
+Success! Item "Vanessa's secret gold stash" stored in container "Bag of Holding".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+2
+Bag of Holding (total weight: 40, empty weight: 40, capacity: 2029/5000)
+   Sam's water pouch (weight: 1)
+   Vanessa's secret gold stash (weight: 2028)
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+2
+Bag of Holding (total weight: 40, empty weight: 40, capacity: 2029/5000)
+   Sam's water pouch (weight: 1)
+   Vanessa's secret gold stash (weight: 2028)
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+2
+Bag of Holding (total weight: 40, empty weight: 40, capacity: 2029/5000)
+   Sam's water pouch (weight: 1)
+   Vanessa's secret gold stash (weight: 2028)
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+2
+Bag of Holding (total weight: 40, empty weight: 40, capacity: 2029/5000)
+   Sam's water pouch (weight: 1)
+   Vanessa's secret gold stash (weight: 2028)
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Vanessa's secret gold stash
+Success! Item "Vanessa's secret gold stash" stored in container "Bag of Holding".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: A rock
+Success! Item "A rock" stored in container "Bag of Holding".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Pierre's daily cheese wheel
+Success! Item "Pierre's daily cheese wheel" stored in container "Bag of Holding".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Crimpy's destroyed cat toys
+Success! Item "Crimpy's destroyed cat toys" stored in container "Bag of Holding".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Charlie's unread emails
+Success! Item "Charlie's unread emails" stored in container "Bag of Holding".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Pierre's funny meme collection
+Success! Item "Pierre's funny meme collection" stored in container "Bag of Holding".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+0

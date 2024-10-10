@@ -1,0 +1,113 @@
+Initialised 57 items including 25 containers.
+
+Enter the name of the container: Arnaud's Oven of Crispiness
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Paul's missing aura points
+Success! Item "Paul's missing aura points" stored in container "Arnaud's Oven of Crispiness".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+2
+Arnaud's Oven of Crispiness (total weight: 100, empty weight: 100, capacity: 22/250000)
+   Paul's missing aura points (weight: 22)
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+2
+Arnaud's Oven of Crispiness (total weight: 100, empty weight: 100, capacity: 22/250000)
+   Paul's missing aura points (weight: 22)
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Elena's fishing count
+Success! Item "Elena's fishing count" stored in container "Arnaud's Oven of Crispiness".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Pierre's funny meme collection
+Success! Item "Pierre's funny meme collection" stored in container "Arnaud's Oven of Crispiness".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Liz's brain cell cluster
+Success! Item "Liz's brain cell cluster" stored in container "Arnaud's Oven of Crispiness".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Robbie's final drop of sanity
+Success! Item "Robbie's final drop of sanity" stored in container "Arnaud's Oven of Crispiness".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+2
+Arnaud's Oven of Crispiness (total weight: 100, empty weight: 100, capacity: 3525/250000)
+   Paul's missing aura points (weight: 22)
+   Elena's fishing count (weight: 3500)
+   Pierre's funny meme collection (weight: 0)
+   Liz's brain cell cluster (weight: 3)
+   Robbie's final drop of sanity (weight: 0)
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Vanessa's secret gold stash
+Success! Item "Vanessa's secret gold stash" stored in container "Arnaud's Oven of Crispiness".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Michael's stack of unmarked assignments
+Success! Item "Michael's stack of unmarked assignments" stored in container "Arnaud's Oven of Crispiness".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Bhagya's publications
+Success! Item "Bhagya's publications" stored in container "Arnaud's Oven of Crispiness".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+0

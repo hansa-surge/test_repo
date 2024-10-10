@@ -1,0 +1,119 @@
+Initialised 57 items including 25 containers.
+
+Enter the name of the container: ==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+Enter the name of the item: Success! Item "Paul's only frontal lobe" stored in container "A backpack".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+Enter the name of the item: Success! Item "A rock" stored in container "A backpack".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+Enter the name of the item: Success! Item "Sam's water pouch" stored in container "A backpack".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+Enter the name of the item: Success! Item "Vanessa's secret gold stash" stored in container "A backpack".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+Enter the name of the item: Failure! Item "Pierre's meme collection" NOT stored in container "A backpack".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+Enter the name of the item: Success! Item "Paul's cringe tiktok compilation" stored in container "A backpack".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+Enter the name of the item: Success! Item "Sam's water pouch" stored in container "A backpack".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+A backpack (total weight: 2103, empty weight: 40, capacity: 2063/5000)
+   Paul's only frontal lobe (weight: 9)
+   A rock (weight: 1)
+   Sam's water pouch (weight: 1)
+   Vanessa's secret gold stash (weight: 2028)
+   Paul's cringe tiktok compilation (weight: 23)
+   Sam's water pouch (weight: 1)
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+Enter the name of the item: Success! Item "Robbie's final drop of sanity" stored in container "A backpack".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+A backpack (total weight: 2103, empty weight: 40, capacity: 2063/5000)
+   Paul's only frontal lobe (weight: 9)
+   A rock (weight: 1)
+   Sam's water pouch (weight: 1)
+   Vanessa's secret gold stash (weight: 2028)
+   Paul's cringe tiktok compilation (weight: 23)
+   Sam's water pouch (weight: 1)
+   Robbie's final drop of sanity (weight: 0)
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+Enter the name of the item: Success! Item "Fibonnaci's rabbytes family tree" stored in container "A backpack".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+Enter the name of the item: Success! Item "A normal cheese platter" stored in container "A backpack".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+Enter the name of the item: Success! Item "Paul's cringe tiktok compilation" stored in container "A backpack".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+Enter the name of the item: Success! Item "Pierre's secret meme collection" stored in container "A backpack".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================

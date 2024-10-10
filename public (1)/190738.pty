@@ -1,0 +1,126 @@
+Initialised 57 items including 25 containers.
+
+Enter the name of the container: A small pocket
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Sam's water pouch
+Success! Item "Sam's water pouch" stored in container "A small pocket".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Chloe's late assignments
+Failure! Item "Chloe's late assignments" NOT stored in container "A small pocket".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Pierre's funny meme collection
+Success! Item "Pierre's funny meme collection" stored in container "A small pocket".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Robbie's final drop of sanity
+Success! Item "Robbie's final drop of sanity" stored in container "A small pocket".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Pierre's funny meme collection
+Success! Item "Pierre's funny meme collection" stored in container "A small pocket".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Liz's brain cell cluster
+Success! Item "Liz's brain cell cluster" stored in container "A small pocket".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Liz's brain cell cluster
+Success! Item "Liz's brain cell cluster" stored in container "A small pocket".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Liz's brain cell cluster
+Success! Item "Liz's brain cell cluster" stored in container "A small pocket".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Sam's water pouch
+Success! Item "Sam's water pouch" stored in container "A small pocket".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Pierre's outdated meme collection
+Failure! Item "Pierre's outdated meme collection" NOT stored in container "A small pocket".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Liz's brain cell cluster
+Success! Item "Liz's brain cell cluster" stored in container "A small pocket".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+2
+A small pocket (total weight: 14, empty weight: 0, capacity: 14/100)
+   Sam's water pouch (weight: 1)
+   Pierre's funny meme collection (weight: 0)
+   Robbie's final drop of sanity (weight: 0)
+   Pierre's funny meme collection (weight: 0)
+   Liz's brain cell cluster (weight: 3)
+   Liz's brain cell cluster (weight: 3)
+   Liz's brain cell cluster (weight: 3)
+   Sam's water pouch (weight: 1)
+   Liz's brain cell cluster (weight: 3)
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+0

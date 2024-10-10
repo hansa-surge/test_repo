@@ -1,0 +1,99 @@
+Initialised 57 items including 25 containers.
+
+Enter the name of the container: ==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+Enter the name of the item: Success! Item "Rehan's Book collection" stored in container "Arnaud's Oven of Crispiness".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+Enter the name of the item: Success! Item "Fibonnaci's recursive call count" stored in container "Arnaud's Oven of Crispiness".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+Enter the name of the item: Success! Item "Robbie's final drop of sanity" stored in container "Arnaud's Oven of Crispiness".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+Arnaud's Oven of Crispiness (total weight: 100, empty weight: 100, capacity: 17951/250000)
+   Rehan's Book collection (weight: 7005)
+   Fibonnaci's recursive call count (weight: 10946)
+   Robbie's final drop of sanity (weight: 0)
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+Arnaud's Oven of Crispiness (total weight: 100, empty weight: 100, capacity: 17951/250000)
+   Rehan's Book collection (weight: 7005)
+   Fibonnaci's recursive call count (weight: 10946)
+   Robbie's final drop of sanity (weight: 0)
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+Arnaud's Oven of Crispiness (total weight: 100, empty weight: 100, capacity: 17951/250000)
+   Rehan's Book collection (weight: 7005)
+   Fibonnaci's recursive call count (weight: 10946)
+   Robbie's final drop of sanity (weight: 0)
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+Enter the name of the item: Success! Item "A rock" stored in container "Arnaud's Oven of Crispiness".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+Enter the name of the item: Success! Item "Paul's only frontal lobe" stored in container "Arnaud's Oven of Crispiness".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+Arnaud's Oven of Crispiness (total weight: 100, empty weight: 100, capacity: 17961/250000)
+   Rehan's Book collection (weight: 7005)
+   Fibonnaci's recursive call count (weight: 10946)
+   Robbie's final drop of sanity (weight: 0)
+   A rock (weight: 1)
+   Paul's only frontal lobe (weight: 9)
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+Enter the name of the item: Success! Item "Liz's brain cell cluster" stored in container "Arnaud's Oven of Crispiness".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+Enter the name of the item: Success! Item "Gabe's Steam game library" stored in container "Arnaud's Oven of Crispiness".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================

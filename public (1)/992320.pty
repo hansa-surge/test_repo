@@ -1,0 +1,100 @@
+Initialised 57 items including 25 containers.
+
+Enter the name of the container: A delicate flower vase
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Taylor's ex-lovers list
+Failure! Item "Taylor's ex-lovers list" NOT stored in container "A delicate flower vase".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Charlie's unread emails
+Failure! Item "Charlie's unread emails" NOT stored in container "A delicate flower vase".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Michael's stack of unmarked assignments
+Failure! Item "Michael's stack of unmarked assignments" NOT stored in container "A delicate flower vase".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Taylor's ex-lovers list
+Failure! Item "Taylor's ex-lovers list" NOT stored in container "A delicate flower vase".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Liz's brain cell cluster
+Success! Item "Liz's brain cell cluster" stored in container "A delicate flower vase".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+2
+A delicate flower vase (total weight: 8, empty weight: 5, capacity: 3/25)
+   Liz's brain cell cluster (weight: 3)
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+2
+A delicate flower vase (total weight: 8, empty weight: 5, capacity: 3/25)
+   Liz's brain cell cluster (weight: 3)
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+2
+A delicate flower vase (total weight: 8, empty weight: 5, capacity: 3/25)
+   Liz's brain cell cluster (weight: 3)
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Paul's cringe tiktok compilation
+Failure! Item "Paul's cringe tiktok compilation" NOT stored in container "A delicate flower vase".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Chloe's half baked ideas
+Success! Item "Chloe's half baked ideas" stored in container "A delicate flower vase".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+0

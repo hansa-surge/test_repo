@@ -1,0 +1,195 @@
+Task 4: Magic containers (1.5 marks)
+"It's not a proper adventure game without magic items," asserts Fibo. Robbie concedes, reluctantly. You know what must be done 🤷 
+Task Description
+An additional file, magic_containers.csv, now provides the description of containers that behave like containers with a single compartment, but that do no increase in weight if items are stored in them. They still have a maximum capacity, though.
+Magic containers
+Displaying a magic container looks like:
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+2
+Bag of Holding (total weight: 40, empty weight: 40, capacity: 4910/5000)
+   A normal cheese platter (weight: 1000)
+   Elena's fishing count (weight: 3500)
+   Tan's Tamagotchi Support Group (weight: 410)
+   Pierre's funny meme collection (weight: 0)
+The total weight remains equal to the empty way. The capacity is computed as for a non-magical container. See Example 1 for a complete example.
+Your program must retain the same functionality as in Task 3, which is to say that it should be possible to select at the beginning any of the containers covered so far. See Example 2.
+Examples
+User inputs are in bold font below.
+Example 1
+Initialised 57 items including 25 containers.
+
+Enter the name of the container: Bag of Holding
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+2
+Bag of Holding (total weight: 40, empty weight: 40, capacity: 0/5000)
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: A normal cheese platter
+Success! Item "A normal cheese platter" stored in container "Bag of Holding".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+2
+Bag of Holding (total weight: 40, empty weight: 40, capacity: 1000/5000)
+   A normal cheese platter (weight: 1000)
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Elena's fishing count
+Success! Item "Elena's fishing count" stored in container "Bag of Holding".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Vanessa's secret gold stash
+Failure! Item "Vanessa's secret gold stash" NOT stored in container "Bag of Holding".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+2
+Bag of Holding (total weight: 40, empty weight: 40, capacity: 4500/5000)
+   A normal cheese platter (weight: 1000)
+   Elena's fishing count (weight: 3500)
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Tan's Tamagotchi Support Group
+Success! Item "Tan's Tamagotchi Support Group" stored in container "Bag of Holding".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Pierre's funny meme collection
+Success! Item "Pierre's funny meme collection" stored in container "Bag of Holding".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+2
+Bag of Holding (total weight: 40, empty weight: 40, capacity: 4910/5000)
+   A normal cheese platter (weight: 1000)
+   Elena's fishing count (weight: 3500)
+   Tan's Tamagotchi Support Group (weight: 410)
+   Pierre's funny meme collection (weight: 0)
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+0
+
+Example 2
+Initialised 57 items including 25 containers.
+
+Enter the name of the container: A lab coat
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+2
+A lab coat (total weight: 0, empty weight: 0, capacity: 0/0)
+   A small pocket (total weight: 0, empty weight: 0, capacity: 0/100)
+   A medium pocket (total weight: 0, empty weight: 0, capacity: 0/200)
+   A small pocket (total weight: 0, empty weight: 0, capacity: 0/100)
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Gabe's Steam game library
+Success! Item "Gabe's Steam game library" stored in container "A lab coat".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Robbie's final drop of sanity
+Success! Item "Robbie's final drop of sanity" stored in container "A lab coat".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+2
+A lab coat (total weight: 0, empty weight: 0, capacity: 0/0)
+   A small pocket (total weight: 0, empty weight: 0, capacity: 0/100)
+      Gabe's Steam game library (weight: 0)
+      Robbie's final drop of sanity (weight: 0)
+   A medium pocket (total weight: 0, empty weight: 0, capacity: 0/200)
+   A small pocket (total weight: 0, empty weight: 0, capacity: 0/100)
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+1
+Enter the name of the item: Robbie's shower thoughts
+Success! Item "Robbie's shower thoughts" stored in container "A lab coat".
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+2
+A lab coat (total weight: 150, empty weight: 0, capacity: 0/0)
+   A small pocket (total weight: 0, empty weight: 0, capacity: 0/100)
+      Gabe's Steam game library (weight: 0)
+      Robbie's final drop of sanity (weight: 0)
+   A medium pocket (total weight: 150, empty weight: 0, capacity: 150/200)
+      Robbie's shower thoughts (weight: 150)
+   A small pocket (total weight: 0, empty weight: 0, capacity: 0/100)
+==================================
+Enter your choice:
+1. Loot item.
+2. List looted items.
+0. Quit.
+==================================
+0
+
