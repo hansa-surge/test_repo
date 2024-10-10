@@ -102,10 +102,11 @@ class MagicContainer(Container):
         else:
             for container in self.items:
                 if(isinstance(container, Container)):
-                    if(container.add_item(item, self.name)):
+                    if(container.get_current_capacity() + item.get_current_weight() <= container.weight_capacity - container.get_child_container_capacity() or isinstance(item, Container)):
+                        container.add_item(item, self.name)
                         return True
                 
-            if self.get_magic_capacity_filled() + item.get_current_weight() <= self.weight_capacity - self.get_child_container_capacity():
+            if self.get_current_capacity() + item.get_current_weight() <= self.weight_capacity - self.get_child_container_capacity():
                 self.items.append(item)
                 if(parent_container_name):
                     print(f"Success! Item \"{item.name}\" stored in container \"{parent_container_name}\".")
@@ -123,14 +124,14 @@ class MagicContainer(Container):
         instance.items = container.items
         return instance
    
-    def get_magic_capacity_filled(self):
+    def get_current_capacity(self):
         return sum(item.get_current_weight() for item in self.items if not isinstance(item, Container))
 
     def get_current_weight(self):
         return self.weight
 
     def __str__(self) -> str:
-        capacity_display = f"{self.get_magic_capacity_filled()}/{self.weight_capacity}"
+        capacity_display = f"{self.get_current_capacity()}/{self.weight_capacity}"
         if self.is_multi_container:
             capacity_display = "0/0"
         return (f"{self.name} (total weight: {self.get_current_weight()}, "
