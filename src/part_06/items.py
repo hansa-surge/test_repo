@@ -12,6 +12,10 @@ class Item:
     def get_current_weight(self):
         return self.weight
     
+    def get_item_weight(self):
+        return self.weight
+    
+    
 
 class ItemManager:
     def __init__(self):

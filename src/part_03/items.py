@@ -8,6 +8,9 @@ class Item:
 
     def __str__(self) -> str:
         return f"{self.name} (weight: {self.weight})"
+
+    def get_current_weight(self):
+        return self.weight
     
 
 class ItemManager:

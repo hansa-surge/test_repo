@@ -13,7 +13,7 @@ class Container(Item):
     def __str__(self) -> str:
         capacity_display = f"{self.get_current_weight()}/{self.weight_capacity}"
         if self.is_multi_container:
-            capacity_display = "0 / 0"
+            capacity_display = "0/0"
         return (f"{self.name} (total weight: {self.get_current_weight()}, "
                 f"empty weight: {self.weight}, capacity: {capacity_display})")
 
@@ -58,7 +58,10 @@ class Container(Item):
         return sum(item.weight_capacity for item in self.items if isinstance(item, Container))
 
     def get_current_weight(self):
-        return self.weight + sum(item.get_current_weight() for item in self.items if not isinstance(item, Container))
+        return self.weight + sum(item.get_item_weight() for item in self.items)
+    
+    def get_item_weight(self):
+        return sum(item.get_current_weight() for item in self.items if not isinstance(item, Container))
 
     def list_items(self, depth=1):
         print(self)
