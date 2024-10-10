@@ -74,11 +74,15 @@ class MainMenu(Screen):
 
 def gameloop():
     items = ItemManager.load_items('items.csv')
-    containers = ContainerManager.load_containers('containers.csv', 'multi_containers.csv', 'magic_containers.csv')
+    containers = ContainerManager.load_containers('containers.csv', 'multi_containers.csv', 'magic_containers.csv', 'magic_multi_containers.csv')
 
-    print_items_and_containers(items, containers)
-    print("")
+    print(f"Initialised {items.get_count()+containers.get_count()} items including {containers.get_count()} containers.\n")
+    # print_items_and_containers(items, containers)
+    # print("")
 
     # Game Loop
     container = ContainerSelectScreen(containers).run()
     MainMenu(items, container).run()
+
+if __name__ == "__main__":
+    gameloop()
