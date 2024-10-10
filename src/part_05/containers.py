@@ -68,7 +68,7 @@ class Container(Item):
                 print(indent, end="")
                 item.list_items(depth + 1)
             else:
-                print(f"{indent}{item.name}")
+                print(f"{indent}{item.name} (weight: {item.weight})")
 
     def get_item_by_name(self, name: str) -> Item:
         return next((item for item in self.items if item.name == name), None)
