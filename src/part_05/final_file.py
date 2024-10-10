@@ -159,7 +159,6 @@ class ItemManager:
 class MagicContainer(Container):
     def __init__(self, name: str, weight: int, weight_capacity: int):
         super().__init__(name, weight, weight_capacity)
-        self.magic_capacity_filled = 0
 
     def add_item(self, item: Item):
         if isinstance(item, Container):
@@ -169,7 +168,8 @@ class MagicContainer(Container):
         else:
             for container in self.items:
                 if(isinstance(container, Container)):
-                    return container.add_item(item)
+                    if(container.add_item(item)):
+                        return True
                 
             if self.get_magic_capacity_filled() + item.get_current_weight() <= self.weight_capacity - self.get_child_container_capacity():
                 self.items.append(item)
@@ -181,7 +181,10 @@ class MagicContainer(Container):
     
     @classmethod
     def convert_container_to_magic(cls, container:Container, magic_name):
-        return cls(magic_name, container.weight, container.weight_capacity)
+        instance = cls(magic_name, container.weight, container.weight_capacity)
+        instance.is_multi_container = container.is_multi_container
+        instance.items = container.items
+        return instance
    
     def get_magic_capacity_filled(self):
         return sum(item.get_current_weight() for item in self.items if not isinstance(item, Container))
@@ -193,6 +196,7 @@ class MagicContainer(Container):
         capacity_display = f"{self.get_magic_capacity_filled()}/{self.weight_capacity}"
         return (f"{self.name} (total weight: {self.get_current_weight()}, "
                 f"empty weight: {self.weight}, capacity: {capacity_display})")
+    
 class ContainerManager:
     def __init__(self):
         self.containers: List[Container] = []  # Initialize as an empty list
