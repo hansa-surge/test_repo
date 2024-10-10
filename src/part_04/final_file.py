@@ -67,7 +67,7 @@ class Container(Item):
             self.weight += item.get_current_weight()
             self.weight_capacity += item.weight_capacity
         else:
-            for container in self.items:
+            for container in reversed(self.items):
                 if(isinstance(container, Container)):
                     if(container.add_item(item)):
                         return True
@@ -236,7 +236,6 @@ class ContainerManager:
                         instance.containers.append(magic_container)
 
         return instance
-
 
     def print_containers(self):
         for container in sorted(self.containers, key=lambda x: x.name):
