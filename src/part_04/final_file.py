@@ -72,7 +72,8 @@ class Container(Item):
         else:
             for container in self.items:
                 if(isinstance(container, Container)):
-                    if(container.add_item(item, self.name)):
+                    if(item.get_current_weight() + container.get_current_weight() <= container.weight_capacity - container.get_child_container_capacity() or isinstance(item, Container)):
+                        container.add_item(item, self.name)
                         return True
                 
             if item.get_current_weight() + self.get_current_weight() <= self.weight_capacity - self.get_child_container_capacity():
