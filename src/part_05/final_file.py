@@ -160,7 +160,7 @@ class MagicContainer(Container):
     def __init__(self, name: str, weight: int, weight_capacity: int):
         super().__init__(name, weight, weight_capacity)
 
-    def add_item(self, item: Item):
+    def add_item(self, item: Item, parent_container_name = None):
         if isinstance(item, Container):
             self.items.append(item)
             self.is_multi_container = True
@@ -168,12 +168,15 @@ class MagicContainer(Container):
         else:
             for container in self.items:
                 if(isinstance(container, Container)):
-                    if(container.add_item(item)):
+                    if(container.add_item(item, self.name)):
                         return True
                 
             if self.get_magic_capacity_filled() + item.get_current_weight() <= self.weight_capacity - self.get_child_container_capacity():
                 self.items.append(item)
-                print(f"Success! Item \"{item.name}\" stored in container \"{self.name}\".")
+                if(parent_container_name):
+                    print(f"Success! Item \"{item.name}\" stored in container \"{parent_container_name}\".")
+                else:
+                    print(f"Success! Item \"{item.name}\" stored in container \"{self.name}\".")
             else:
                 print(f"Failure! Item \"{item.name}\" NOT stored in container \"{self.name}\".")
                 return False
@@ -348,8 +351,6 @@ def gameloop():
     containers = ContainerManager.load_containers('containers.csv', 'multi_containers.csv', 'magic_containers.csv', 'magic_multi_containers.csv')
 
     print(f"Initialised {items.get_count()+containers.get_count()} items including {containers.get_count()} containers.\n")
-    # print_items_and_containers(items, containers)
-    # print("")
 
     # Game Loop
     container = ContainerSelectScreen(containers).run()
