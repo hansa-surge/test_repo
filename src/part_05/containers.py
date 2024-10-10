@@ -115,7 +115,10 @@ class MagicContainer(Container):
     
     @classmethod
     def convert_container_to_magic(cls, container:Container, magic_name):
-        return cls(magic_name, container.weight, container.weight_capacity)
+        instance = cls(magic_name, container.weight, container.weight_capacity)
+        instance.is_multi_container = container.is_multi_container
+        instance.items = container.items
+        return instance
    
     def get_magic_capacity_filled(self):
         return sum(item.get_current_weight() for item in self.items if not isinstance(item, Container))
@@ -127,6 +130,7 @@ class MagicContainer(Container):
         capacity_display = f"{self.get_magic_capacity_filled()}/{self.weight_capacity}"
         return (f"{self.name} (total weight: {self.get_current_weight()}, "
                 f"empty weight: {self.weight}, capacity: {capacity_display})")
+    
 class ContainerManager:
     def __init__(self):
         self.containers: List[Container] = []  # Initialize as an empty list
