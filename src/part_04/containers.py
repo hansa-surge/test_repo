@@ -108,7 +108,7 @@ class MagicContainer(Container):
         return cls(magic_name, container.weight, container.weight_capacity)
    
     def get_magic_capacity_filled(self):
-        return self.weight + sum(item.get_current_weight() for item in self.items if not isinstance(item, Container))
+        return sum(item.get_current_weight() for item in self.items if not isinstance(item, Container))
 
     def get_current_weight(self):
         return self.weight

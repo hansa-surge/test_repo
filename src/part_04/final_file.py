@@ -171,7 +171,7 @@ class MagicContainer(Container):
         return cls(magic_name, container.weight, container.weight_capacity)
    
     def get_magic_capacity_filled(self):
-        return self.weight + sum(item.get_current_weight() for item in self.items if not isinstance(item, Container))
+        return sum(item.get_current_weight() for item in self.items if not isinstance(item, Container))
 
     def get_current_weight(self):
         return self.weight
@@ -331,8 +331,9 @@ def gameloop():
     items = ItemManager.load_items('items.csv')
     containers = ContainerManager.load_containers('containers.csv', 'multi_containers.csv', 'magic_containers.csv')
 
-    print_items_and_containers(items, containers)
-    print("")
+    print(f"Initialised {items.get_count()+containers.get_count()} items including {containers.get_count()} containers.\n")
+    # print_items_and_containers(items, containers)
+    # print("")
 
     # Game Loop
     container = ContainerSelectScreen(containers).run()
