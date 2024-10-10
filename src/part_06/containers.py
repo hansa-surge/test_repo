@@ -31,8 +31,8 @@ class Container(Item):
                 instance.add_item(item)
         return instance
 
-    def add_item(self, item: Item, parent_container_name = None):
-        if isinstance(item, Container):
+    def add_item(self, item: Item, parent_container_name = None, start_load=False):
+        if (isinstance(item, Container) and start_load):
             self.items.append(item)
             self.is_multi_container = True
             self.weight += item.get_current_weight()
@@ -94,8 +94,8 @@ class MagicContainer(Container):
     def __init__(self, name: str, weight: int, weight_capacity: int):
         super().__init__(name, weight, weight_capacity)
 
-    def add_item(self, item: Item, parent_container_name = None):
-        if isinstance(item, Container):
+    def add_item(self, item: Item, parent_container_name = None, start_load=False):
+        if (isinstance(item, Container) and start_load):
             self.items.append(item)
             self.is_multi_container = True
             self.weight_capacity += item.weight_capacity
