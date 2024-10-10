@@ -74,7 +74,7 @@ class MainMenu(Screen):
 
 def gameloop():
     items = ItemManager.load_items('items.csv')
-    containers = ContainerManager.load_magic_containers('containers.csv','magic_containers.csv')
+    containers = ContainerManager.load_containers('containers.csv', 'multi_containers.csv', 'magic_containers.csv')
 
     print_items_and_containers(items, containers)
     print("")
