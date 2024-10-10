@@ -105,7 +105,7 @@ class Container(Item):
 
     def list_items(self, depth=1):
         print(self)
-        for item in sorted(self.items, key=lambda x: x.name):
+        for item in self.items:
             indent = "   " * depth
             if isinstance(item, Container):
                 print(indent, end="")

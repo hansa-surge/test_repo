@@ -73,7 +73,7 @@ class Container(Item):
 
     def list_items(self, depth=1):
         print(self)
-        for item in sorted(self.items, key=lambda x: x.name):
+        for item in self.items:
             indent = "   " * depth
             if isinstance(item, Container):
                 print(indent, end="")
@@ -186,7 +186,7 @@ class ContainerManager:
 
 
     def print_containers(self):
-        for container in sorted(self.containers, key=lambda x: x.name):
+        for container in self.containers:
             container.list_items()  # Assuming `Container` class has print_items()
 
     def add_container(self, containers: List[Container]):
