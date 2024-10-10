@@ -17,7 +17,7 @@ class ContainerSelectScreen(Screen):
         self.containers: ContainerManager = containers
     
     def display_menu(self):
-        print("")
+        return
 
     def get_choice(self):
         return input("Enter the name of the container: ")

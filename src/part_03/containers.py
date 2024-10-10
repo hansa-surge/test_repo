@@ -45,7 +45,7 @@ class Container(Item):
                 
             if item.weight + self.get_current_weight() <= self.weight_capacity - self.get_child_container_capacity():
                 self.items.append(item)
-                print(f"Success! Item \"{item.name}\" stored in \"{self.name}\".")
+                print(f"Success! Item \"{item.name}\" stored in container \"{self.name}\".")
             else:
                 print(f"Failure! Item \"{item.name}\" exceeds the weight capacity of \"{self.name}\".")
                 return False

@@ -29,7 +29,7 @@ class Container:
         if item.weight + self.get_current_weight() <= self.weight_capacity:
             self.items.add_item(item)
             self.current_weight += item.weight
-            print(f"Success! Item \"{item.name}\" stored in \"{self.name}\".")
+            print(f"Success! Item \"{item.name}\" stored in container \"{self.name}\".")
         else:
             print(f"Failure! Item \"{item.name}\" NOT stored in container \"{self.name}\".")
 
