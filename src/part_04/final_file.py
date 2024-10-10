@@ -7,7 +7,7 @@ class Screen:
         raise NotImplementedError("This method should be overridden by subclasses.")
 
     def get_choice(self):
-        return input("Your choice: ")
+        return input("")
 
     def handle_choice(self, choice):
         raise NotImplementedError("This method should be overridden by subclasses.")
@@ -40,7 +40,7 @@ class Container(Item):
         self.is_multi_container = False
 
     def __str__(self) -> str:
-        capacity_display = f"{self.get_current_weight()} / {self.weight_capacity}"
+        capacity_display = f"{self.get_current_weight()}/{self.weight_capacity}"
         if self.is_multi_container:
             capacity_display = "0 / 0"
         return (f"{self.name} (total weight: {self.get_current_weight()}, "
@@ -177,7 +177,7 @@ class MagicContainer(Container):
         return self.weight
 
     def __str__(self) -> str:
-        capacity_display = f"{self.get_magic_capacity_filled()} / {self.weight_capacity}"
+        capacity_display = f"{self.get_magic_capacity_filled()}/{self.weight_capacity}"
         return (f"{self.name} (total weight: {self.get_current_weight()}, "
                 f"empty weight: {self.weight}, capacity: {capacity_display})")
 class ContainerManager:
@@ -305,7 +305,7 @@ class MainMenu(Screen):
         elif choice == "2":
             self.list_looted_items()
         elif choice == "0":
-            print("Exiting the program.")
+            
             exit()
         else:
             print("Invalid choice. Try again.")
@@ -318,7 +318,7 @@ class MainMenu(Screen):
 
             if item:
                 self.container.add_item(item)
-                print(f"Looted \"{item.name}\".")
+                
                 break
             else:
                 print(f"\"{item_name}\" not found. Try again.")

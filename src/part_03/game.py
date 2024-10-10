@@ -50,7 +50,7 @@ class MainMenu(Screen):
         elif choice == "2":
             self.list_looted_items()
         elif choice == "0":
-            print("Exiting the program.")
+            
             exit()
         else:
             print("Invalid choice. Try again.")
@@ -63,7 +63,7 @@ class MainMenu(Screen):
 
             if item:
                 self.container.add_item(item)
-                print(f"Looted \"{item.name}\".")
+                
                 break
             else:
                 print(f"\"{item_name}\" not found. Try again.")
