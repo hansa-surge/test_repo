@@ -60,21 +60,24 @@ class Container(Item):
                 instance.add_item(item)
         return instance
 
-    def add_item(self, item: Item):
+    def add_item(self, item: Item, parent_container_name = None):
         if isinstance(item, Container):
             self.items.append(item)
             self.is_multi_container = True
             self.weight += item.get_current_weight()
             self.weight_capacity += item.weight_capacity
         else:
-            for container in reversed(self.items):
+            for container in self.items:
                 if(isinstance(container, Container)):
-                    if(container.add_item(item)):
+                    if(container.add_item(item, self.name)):
                         return True
                 
             if item.get_current_weight() + self.get_current_weight() <= self.weight_capacity - self.get_child_container_capacity():
                 self.items.append(item)
-                print(f"Success! Item \"{item.name}\" stored in container \"{self.name}\".")
+                if(parent_container_name):
+                    print(f"Success! Item \"{item.name}\" stored in container \"{parent_container_name}\".")
+                else:
+                    print(f"Success! Item \"{item.name}\" stored in container \"{self.name}\".")
             else:
                 print(f"Failure! Item \"{item.name}\" NOT stored in container \"{self.name}\".")
                 return False
