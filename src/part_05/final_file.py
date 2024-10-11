@@ -6,7 +6,7 @@ from typing import List
 class Screen:
     def display_menu(self):
         # To be overridden by subclasses, defines what to show on the screen
-        raise NotImplementedError("This method should be overridden by subclasses.")
+        pass
 
     def get_choice(self):
         # Get the user's choice from input
@@ -14,7 +14,7 @@ class Screen:
 
     def handle_choice(self, choice):
         # To be overridden by subclasses, defines how to handle user input
-        raise NotImplementedError("This method should be overridden by subclasses.")
+        pass
 
     def run(self):
         # Run a loop where the screen is displayed and the user makes choices

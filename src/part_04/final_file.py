@@ -5,14 +5,14 @@ from typing import List
 class Screen:
     # Base class for the different screen interfaces in the game.
     def display_menu(self):
-        raise NotImplementedError("This method should be overridden by subclasses.")
+        pass
 
     def get_choice(self):
         # Collect user input for menu selection.
         return input("")
 
     def handle_choice(self, choice):
-        raise NotImplementedError("This method should be overridden by subclasses.")
+        pass
 
     def run(self):
         # Main loop to run the screen and process user choices.
@@ -384,7 +384,7 @@ class MainMenu(Screen):
     def list_looted_items(self):
         """List all the looted items."""
         self.container.list_items()
-        
+
 def gameloop():
     items = ItemManager.load_items('items.csv')
     containers = ContainerManager.load_containers('containers.csv', 'multi_containers.csv', 'magic_containers.csv')
