@@ -31,7 +31,7 @@ class Container(Item):
                 instance.add_item(item)
         return instance
 
-    def add_item(self, item: Item, parent_container_name = None, start_load=False):
+    def add_item(self, item: Item, parent_container_name = None, start_load=False, depth=0):
         if (isinstance(item, Container) and start_load):
             self.items.append(item)
             self.is_multi_container = True
@@ -40,11 +40,21 @@ class Container(Item):
         else:
             for container in self.items:
                 if(isinstance(container, Container)):
-                    if(item.get_current_weight() + container.get_current_capacity() <= container.weight_capacity - container.get_child_container_capacity() or isinstance(item, Container)):
-                        container.add_item(item, self.name)
+                    if(item.get_current_weight() + container.get_current_capacity() <= container.weight_capacity):
+                        if(depth<0):
+                            container.add_item(item, self.name, depth=depth+1)
+                        else:
+                            self.items.append(item)
+                            if(parent_container_name):
+                                print(f"Success! Item \"{item.name}\" stored in container \"{parent_container_name}\".")
+                            else:
+                                print(f"Success! Item \"{item.name}\" stored in container \"{self.name}\".")
+
                         return True
+                    else:
+                        print("SKIPPED")
                 
-            if item.get_current_weight() + self.get_current_capacity() <= self.weight_capacity - self.get_child_container_capacity():
+            if item.get_current_weight() + self.get_current_capacity() <= self.weight_capacity:
                 self.items.append(item)
                 if(parent_container_name):
                     print(f"Success! Item \"{item.name}\" stored in container \"{parent_container_name}\".")
@@ -94,7 +104,7 @@ class MagicContainer(Container):
     def __init__(self, name: str, weight: int, weight_capacity: int):
         super().__init__(name, weight, weight_capacity)
 
-    def add_item(self, item: Item, parent_container_name = None, start_load=False):
+    def add_item(self, item: Item, parent_container_name = None, start_load=False, depth=0):
         if (isinstance(item, Container) and start_load):
             self.items.append(item)
             self.is_multi_container = True
@@ -102,11 +112,18 @@ class MagicContainer(Container):
         else:
             for container in self.items:
                 if(isinstance(container, Container)):
-                    if(container.get_current_capacity() + item.get_current_weight() <= container.weight_capacity - container.get_child_container_capacity() or isinstance(item, Container)):
-                        container.add_item(item, self.name)
+                    if(container.get_current_capacity() + item.get_current_weight() <= container.weight_capacity):
+                        if(depth<0):
+                            container.add_item(item, self.name)
+                        else:
+                            self.items.append(item)
+                            if(parent_container_name):
+                                print(f"Success! Item \"{item.name}\" stored in container \"{parent_container_name}\".")
+                            else:
+                                print(f"Success! Item \"{item.name}\" stored in container \"{self.name}\".")
                         return True
                 
-            if self.get_current_capacity() + item.get_current_weight() <= self.weight_capacity - self.get_child_container_capacity():
+            if self.get_current_capacity() + item.get_current_weight() <= self.weight_capacity:
                 self.items.append(item)
                 if(parent_container_name):
                     print(f"Success! Item \"{item.name}\" stored in container \"{parent_container_name}\".")
